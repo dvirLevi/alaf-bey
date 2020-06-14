@@ -1,32 +1,33 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="app" class="container-fluid">
+    <toolBar />
+    <div class="container">
+      <router-view />
     </div>
-    <router-view/>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+  // @ is an alias to /src
+  import toolBar from '@/components/toolBar.vue'
+
+  export default {
+    name: 'Home',
+    components: {
+      toolBar
+    }
+  }
+</script>
+
+<style scoped>
+.container-fluid {
+  background-color: #f5f5dc41;
+  min-height: 100vh;
 }
 
-#nav {
-  padding: 30px;
-}
+/* .container {
+    min-height: calc(100vh - 125px);
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+} */
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

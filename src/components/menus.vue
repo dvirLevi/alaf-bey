@@ -1,0 +1,166 @@
+<template>
+  <!-- <div class="row row-sticky"> -->
+  <!-- <div class="col"> -->
+  <div class="bac-menu" @click="$emit('close')">
+    <div class=" wrap-items p-2">
+      <!-- <div class="box-img center-all pl-5 mb-5 mt-5">
+        <img class="w-100" src="../assets/logo-red.png" alt="">
+      </div> -->
+      <router-link class="items-menu" :to="item.link" v-for="item in categories" :key="item.id">
+        {{item.text}}
+      </router-link>
+    </div>
+  </div>
+
+</template>
+
+<script>
+  export default {
+    name: 'menus',
+    components: {
+
+    },
+    props: {
+
+    },
+    data() {
+      return {
+        categories: [
+          {
+            text: "ראשי",
+            link: "/ManagementSystem",
+            id: 0
+          },{
+            text: "הוספת מאמר חדשות",
+            link: "/ManagementSystem/addNews",
+            id: 1
+          },
+          {
+            text: "עריכת מאמר חדשות",
+            link: "/ManagementSystem/listOfNews",
+            id: 2
+          },
+          {
+            text: "הוספת פודקאסט",
+            link: "/ManagementSystem/addPodcast",
+            id: 3
+          },
+           {
+            text: "עריכת פודקאסט",
+            link: "/ManagementSystem/listOfPodcasts",
+            id: 4
+          },
+          {
+            text: "הוספת מאמר דעה",
+            link: "/ManagementSystem/addOpinionArticle",
+            id: 5
+          },
+           {
+            text: "עריכת מאמר דעה",
+            link: "/ManagementSystem/listOfOpinionArticle",
+            id: 6
+          },
+          
+        ]
+
+      }
+    },
+    computed: {
+      // categories() {
+      //   return this.$store.state.categories;
+      // }
+
+    },
+    methods: {
+
+    }
+  }
+
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  .menusToolBar {
+    display: none;
+  }
+
+  .bac-menu {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: #3333338c;
+    right: 0;
+    top: 0;
+    height: 100%;
+
+  }
+
+  .wrap-items {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20%;
+    background: #ffffff;
+    height: 100%;
+    flex-direction: column;
+    animation-name: op;
+    animation-duration: 0.3s;
+    display: flex;
+  }
+
+  .items-menu {
+    margin: 0;
+    padding: 7px 10px;
+    width: 100%;
+    border-bottom: solid #d8d8d8 1px;
+    font-size: 21px;
+    animation-name: items;
+    animation-duration: 0.5s;
+    /* animation-delay: 0.5s; */
+  }
+
+  .items-menu:last-child {
+    border-bottom: none;
+  }
+
+  .box-img {
+    width: 50%;
+  }
+
+
+  @keyframes op {
+    0% {
+      right: -100%;
+    }
+
+    100% {
+      right: 0%;
+    }
+  }
+
+  @keyframes items {
+    0% {
+      padding: 0px 10px;
+    }
+
+    100% {
+      padding: 7px 10px;
+    }
+  }
+
+
+  @media (max-width: 767.98px) {
+    .wrap-items {
+      width: 75%;
+    }
+
+    .items-menu {
+      font-size: 18px;
+    }
+
+    /* .box-img {
+      width: 100px;
+    } */
+  }
+
+</style>
