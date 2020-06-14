@@ -109,7 +109,7 @@
     }
 
     100% {
-      padding: 7px 10px;
+       padding: 15px 10px;
     }
   }
 
