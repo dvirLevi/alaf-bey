@@ -35,6 +35,11 @@ export default new Vuex.Store({
       link: "/asd",
       id: 4
     },
+    {
+      name: "אודות",
+      link: "/asd",
+      id: 5
+    },
   ]
   },
   mutations: {
