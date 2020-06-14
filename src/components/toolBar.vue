@@ -7,7 +7,7 @@
     </div>
     <div class="col-md-4 col-8 center-left pl-md-5 pl-3">
       <Hamburger @openClose="openCloseMenu = !openCloseMenu" :openCloseMenu="openCloseMenu" />
-      <menus v-if="openCloseMenu" @openClose="openCloseMenu = !openCloseMenu"/>
+      <menus v-if="openCloseMenu" @close="openCloseMenu = !openCloseMenu"/>
     </div>
   </nav>
 </template>

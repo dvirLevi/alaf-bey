@@ -1,7 +1,7 @@
 <template>
-  <div class="row-logo center">
+  <router-link to="/" class="row-logo center">
     <h1 class="m-0">אַלַף-בֵּי</h1>
-  </div>
+  </router-link>
 </template>
 
 <script>

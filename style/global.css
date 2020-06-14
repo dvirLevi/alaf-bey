@@ -122,9 +122,9 @@ body {
   background-position: 50%;
 }
 
-.router-link-exact-active {
+/* .router-link-exact-active {
   color: #797979 !important;
-}
+} */
 
 /* .router-link-active {
   color: #797979;
