@@ -7,7 +7,7 @@
         <img class="w-100" src="../assets/logo-red.png" alt="">
       </div> -->
       <router-link class="items-menu" :to="item.link" v-for="item in categories" :key="item.id">
-        {{item.text}}
+        {{item.name}}
       </router-link>
     </div>
   </div>
@@ -25,50 +25,14 @@
     },
     data() {
       return {
-        categories: [
-          {
-            text: "ראשי",
-            link: "/ManagementSystem",
-            id: 0
-          },{
-            text: "הוספת מאמר חדשות",
-            link: "/ManagementSystem/addNews",
-            id: 1
-          },
-          {
-            text: "עריכת מאמר חדשות",
-            link: "/ManagementSystem/listOfNews",
-            id: 2
-          },
-          {
-            text: "הוספת פודקאסט",
-            link: "/ManagementSystem/addPodcast",
-            id: 3
-          },
-           {
-            text: "עריכת פודקאסט",
-            link: "/ManagementSystem/listOfPodcasts",
-            id: 4
-          },
-          {
-            text: "הוספת מאמר דעה",
-            link: "/ManagementSystem/addOpinionArticle",
-            id: 5
-          },
-           {
-            text: "עריכת מאמר דעה",
-            link: "/ManagementSystem/listOfOpinionArticle",
-            id: 6
-          },
-          
-        ]
+       
 
       }
     },
     computed: {
-      // categories() {
-      //   return this.$store.state.categories;
-      // }
+      categories() {
+        return this.$store.state.categories;
+      }
 
     },
     methods: {
@@ -110,13 +74,14 @@
 
   .items-menu {
     margin: 0;
-    padding: 7px 10px;
+    padding: 15px 10px;
     width: 100%;
     border-bottom: solid #d8d8d8 1px;
     font-size: 21px;
     animation-name: items;
     animation-duration: 0.5s;
     /* animation-delay: 0.5s; */
+    font-size: 23px;
   }
 
   .items-menu:last-child {
