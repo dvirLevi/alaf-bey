@@ -3,7 +3,7 @@
     <div class="box-arrow">
       <i class="fas fa-chevron-right c-p" @click.stop="changeIndex('-')"></i>
     </div>
-    <boxLetter :correntLetter="correntLetter" :key="correntLetter.id" @clickNextLetter="changeIndex('+')" />
+    <boxLetter :correntLetter="correntLetter" :playList="playList" :key="correntLetter.id" @clickNextLetter="changeIndex('+')" @autoNextLetter="changeIndex('+')" />
     <div class="box-arrow">
       <i class="fas fa-chevron-left c-p" @click.stop="changeIndex('+')"></i>
     </div>
@@ -20,7 +20,8 @@
       boxLetter
     },
     props: {
-      letterAndSound: Array
+      letterAndSound: Array,
+      playList: Boolean
     },
     data() {
       return {

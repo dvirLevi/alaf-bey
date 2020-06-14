@@ -1,7 +1,12 @@
 <template>
   <div class="row">
     <div class="col">
-      <boxArrowLetter :letterAndSound="letterAndSound" />
+      <boxArrowLetter :letterAndSound="letterAndSound" :playList="playList" />
+      <div class="row">
+        <div class="col center">
+           <ButtonLink :text="playList? 'עצור': 'השמעה ברצף'" @customEvent="playList = !playList" selectRouteColor="#ee9b36e6" link="" backColor="#ffae4db8" backColorHov="#ffae4dd9" class="center h4 p-3" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -17,6 +22,7 @@
     },
     data() {
       return {
+        playList: false,
         letterAndSound: [{
             letter: "א",
             sound: "audio/1.wav",

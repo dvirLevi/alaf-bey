@@ -1,7 +1,7 @@
 <template>
-  <div class="box-letter center mt-5">
-    <p @click="clickNextLetter">{{correntLetter.letter}}</p>
-    <audio ref="sound" @ended="$emit('nextLetter')" :src="correntLetter.sound"></audio>
+  <div class="box-letter center">
+    <p class="c-p" @click="clickNextLetter">{{correntLetter.letter}}</p>
+    <audio ref="sound" @ended="autoNextLetter" :src="correntLetter.sound"></audio>
   </div>
 </template>
 
@@ -15,7 +15,8 @@
       // HelloWorld
     },
     props: {
-      correntLetter: Object
+      correntLetter: Object,
+      playList: Boolean
     },
     data() {
       return {
@@ -31,6 +32,20 @@
       },
       clickNextLetter() {
         this.$emit('clickNextLetter')
+      },
+      autoNextLetter() {
+        setTimeout(() => {
+          if (this.playList) {
+            this.$emit('autoNextLetter')
+          }
+        }, 1000)
+      }
+    },
+    watch: {
+      playList: function () {
+        if (this.playList) {
+          this.autoNextLetter()
+        }
       }
     }
   }
@@ -43,7 +58,7 @@
   }
 
   .box-letter p {
-    font-size: 250px;
+    font-size: 350px;
   }
 
   .box-arrow i {
@@ -57,7 +72,7 @@
     }
 
     .box-letter p {
-      font-size: 230px;
+      font-size: 280px;
     }
 
     .box-arrow i {
