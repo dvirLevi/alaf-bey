@@ -62,10 +62,7 @@
     font-size: 350px;
   }
 
-  .box-arrow i {
-    width: 10%;
-    font-size: 80px;
-  }
+ 
 
   @media (max-width: 767.98px) {
     .box-letter {
@@ -76,8 +73,6 @@
       font-size: 240px;
     }
 
-    .box-arrow i {
-      font-size: 45px;
-    }
+   
   }
 </style>

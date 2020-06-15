@@ -66,6 +66,8 @@
   }
 
   button {
+    width: 100%;
+    height: 100%;
     border: none;
     outline: none;
     background-color: rgba(255, 255, 255, 0);

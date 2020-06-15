@@ -13,7 +13,7 @@ export default new Vuex.Store({
     },
     {
       name: "חזרה על שמות האותיות",
-      link: "/asd",
+      link: "/testOnLetters",
       category: 1,
       id: 12
     },
