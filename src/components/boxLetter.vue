@@ -44,6 +44,7 @@
     watch: {
       playList: function () {
         if (this.playList) {
+          this.playSound();
           this.autoNextLetter()
         }
       }
@@ -72,7 +73,7 @@
     }
 
     .box-letter p {
-      font-size: 280px;
+      font-size: 240px;
     }
 
     .box-arrow i {

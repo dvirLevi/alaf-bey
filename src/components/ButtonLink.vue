@@ -1,8 +1,8 @@
 <template>
   <div class="my-button c-p" @click.stop="$emit('customEvent')" @mouseover="hovColor" @mouseout="outHovColor"
     :style="{backgroundColor: selectRoute}">
-    <router-link v-if="link" class="" tag="button" :to="link" :style="{color: textColor}">{{text}}</router-link>
-    <button :type="type" :form="formId" class="" v-else :style="{color: textColor}">{{text}}</button>
+    <router-link v-if="link" class="" tag="button" :to="link" :style="{color: textColor}"><slot></slot>{{text}}</router-link>
+    <button :type="type" :form="formId" class="" v-else :style="{color: textColor}"><slot></slot>{{text}}</button>
   </div>
 </template>
 
