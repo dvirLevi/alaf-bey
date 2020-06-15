@@ -4,9 +4,11 @@
       <boxArrowLetter :letterAndSound="letterAndSound" :playList="playList" boxOf="letter" />
       <div class="row center">
         <!-- <div class="col center"> -->
-           <ButtonLink text="" @customEvent="playList = !playList" selectRouteColor="#ee9b36e6" link="" backColor="#ffae4db8" backColorHov="#ffae4dd9" class="center col-md-3 col-8 h5 p-2 w-50" >
-             {{playList? 'עצור': 'השמעה ברצף'}}<i class="m-2" :class="playList? 'fas fa-stop': 'fas fa-play'"></i>
-           </ButtonLink>
+        <ButtonLink text="" @customEvent="playList = !playList" selectRouteColor="#ee9b36e6" link=""
+          backColor="#ffae4db8" backColorHov="#ffae4dd9" class="center col-md-3 col-8 h5 p-2 w-50">
+          <!-- {{playList? 'עצור': 'השמעה ברצף'}} -->
+          <i class="m-2" :class="playList? 'fas fa-stop': 'fas fa-play'"></i>
+        </ButtonLink>
         <!-- </div> -->
       </div>
     </div>
@@ -25,8 +27,7 @@
     data() {
       return {
         playList: false,
-        letterAndSound: [
-          {
+        letterAndSound: [{
             letter: "א",
             sound: "audio/letters/1.wav",
             id: 1
@@ -101,7 +102,7 @@
             sound: "audio/letters/15.wav",
             id: 15
           },
-           {
+          {
             letter: "ך",
             sound: "audio/letters/16.wav",
             id: 16
@@ -116,7 +117,7 @@
             sound: "audio/letters/18.wav",
             id: 18
           },
-           {
+          {
             letter: "ם",
             sound: "audio/letters/19.wav",
             id: 19
@@ -131,7 +132,7 @@
             sound: "audio/letters/21.wav",
             id: 21
           },
-           {
+          {
             letter: "ס",
             sound: "audio/letters/22.wav",
             id: 22
@@ -146,7 +147,7 @@
             sound: "audio/letters/24.wav",
             id: 24
           },
-           {
+          {
             letter: "פ",
             sound: "audio/letters/25.wav",
             id: 25
@@ -161,7 +162,7 @@
             sound: "audio/letters/27.wav",
             id: 27
           },
-           {
+          {
             letter: "ץ",
             sound: "audio/letters/28.wav",
             id: 28
@@ -177,7 +178,7 @@
             id: 30
           },
 
-           {
+          {
             letter: "שׁ",
             sound: "audio/letters/31.wav",
             id: 31
@@ -205,31 +206,11 @@
 </script>
 
 <style scoped>
-  .box-letter {
-    font-family: 'shofarregular';
-    width: 50%;
-  }
-
-  .box-letter p {
-    font-size: 250px;
-  }
-
-  .box-arrow i {
-    width: 10%;
-    font-size: 80px;
+  .fas {
+    font-size: 30px;
   }
 
   @media (max-width: 767.98px) {
-    .box-letter {
-      width: 80%;
-    }
 
-    .box-letter p {
-      font-size: 230px;
-    }
-
-    .box-arrow i {
-      font-size: 45px;
-    }
   }
 </style>

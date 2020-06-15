@@ -38,7 +38,7 @@
           if (this.playList) {
             this.$emit('autoNextLetter')
           }
-        }, 1000)
+        }, 500)
       }
     },
     watch: {
