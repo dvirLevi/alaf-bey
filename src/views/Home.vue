@@ -21,7 +21,7 @@
           <h2>לחזרה ופיתוח הלימוד עם האב</h2>
         </div>
       </div>
-      <div class="row center mt-md-5 mt-2">
+      <div class="row center mt-md-5 mt-4">
         <!-- <div class="col "> -->
           <router-link :to="item.link" class="box-butt p-3 col-md-7 m-md-3  m-1" v-for="item in mainCategory" :key="item.id">
             {{item.name}}

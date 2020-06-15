@@ -6,6 +6,9 @@
       <!-- <div class="box-img center-all pl-5 mb-5 mt-5">
         <img class="w-100" src="../assets/logo-red.png" alt="">
       </div> -->
+      <div class="w-100 center-right p-2">
+      <logo />
+      </div>
       <router-link class="items-menu" :to="item.link" v-for="item in categories" :key="item.id">
         {{item.name}}
       </router-link>
@@ -15,10 +18,12 @@
 </template>
 
 <script>
+import logo from '@/components/logo.vue'
+
   export default {
     name: 'menus',
     components: {
-
+logo
     },
     props: {
 

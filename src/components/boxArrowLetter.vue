@@ -1,12 +1,15 @@
 <template>
   <div class="w-100 center wrap-box">
+    <div class="w-100 center score h4" v-if="boxOf === 'test'">
+      ניקוד: {{score}} 
+    </div>
     <div class="box-arrow" v-if="boxOf !== 'test'">
       <i class="fas fa-chevron-right c-p" @click.stop="changeIndex('-')"></i>
     </div>
     <boxLetter v-if="boxOf === 'letter'" :correntLetter="correntLetter" :playList="playList" :key="correntLetter.id"
       @clickNextLetter="changeIndex('+')" @autoNextLetter="changeIndex('+')" />
     <boxTest v-if="boxOf === 'test'" :correntLetter="correntLetter" :playList="playList" :key="correntLetter.id"
-      @clickNextLetter="changeIndex('+')" @autoNextLetter="changeIndex('+')" />
+      @clickNextLetter="changeIndex('+')" @incScore="incScore" />
     <div class="box-arrow" v-if="boxOf !== 'test'">
       <i class="fas fa-chevron-left c-p" @click.stop="changeIndex('+')"></i>
     </div>
@@ -31,7 +34,8 @@
     },
     data() {
       return {
-        index: 0
+        index: 0,
+        score: 0
       }
     },
     methods: {
@@ -47,6 +51,11 @@
           if (action === '+') this.index++;
           if (action === '-') this.index = this.letterAndSound.length - 1;
         }
+      },
+      incScore(ifInc) {
+        console.log(ifInc)
+        if(ifInc){this.score = this.score+10}
+        else if(this.score) {this.score = this.score-5}
       }
     },
     computed: {
@@ -59,7 +68,7 @@
 
 <style scoped>
   .wrap-box {
-    height: 60vh;
+    height: 55vh;
   }
 
   .box-arrow i {

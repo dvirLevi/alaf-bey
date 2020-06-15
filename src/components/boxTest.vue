@@ -39,10 +39,12 @@
           audioElement.play();
           audioElement.onended = () => {
             this.$emit('clickNextLetter')
+            this.$emit('incScore', ifCorrect)
           }
         } else {
           audioElement = new Audio('audio/nogood.wav');
           audioElement.play();
+          this.$emit('incScore', ifCorrect)
         }
       },
       palyNameOfLetter() {
