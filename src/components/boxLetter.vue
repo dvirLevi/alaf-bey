@@ -60,6 +60,7 @@
 
   .box-letter p {
     font-size: 350px;
+    -webkit-user-select: none;
   }
 
  

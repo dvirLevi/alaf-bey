@@ -89,6 +89,7 @@
     text-align: center;
     font-size: 200px;
     width: 33%;
+    -webkit-user-select: none;
   }
 
   @media (max-width: 767.98px) {

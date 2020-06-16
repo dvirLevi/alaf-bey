@@ -14,13 +14,15 @@
     <boxLetter v-if="boxOf === 'letter'" :correntLetter="correntLetter" :playList="playList" :key="correntLetter.id"
       @clickNextLetter="changeIndex('+')" @autoNextLetter="changeIndex('+')" />
     <template v-if="boxOf === 'test'">
-      <div v-if="level === 10">
-        <h2 class="text-center mt-4">הניקוד שלך הוא {{score}}</h2>
-        <h2 class="text-center">יופי! סיימת את המשחק בהצלחה</h2>
+      <div v-if="level === 10" class="center">
+        <h4 class="text-center w-100 mt-5">הניקוד שלך הוא {{score}}</h4>
+        <h4 class="text-center w-100">יופי! סיימת את המשחק בהצלחה</h4>
+         <ButtonLink text="שחק שוב" selectRouteColor="#ee9b36e6" link="" @customEvent="playAgain" backColor="#ffae4db8" backColorHov="#ffae4dd9" class="center m-1" />
       </div>
-      <div v-else-if="rejectionScore <= 0">
-        <h2 class="text-center mt-4">הניקוד שלך הוא {{score}}.</h2>
-        <h2 class="text-center">לא נורא נסה לשחק שוב</h2>
+      <div v-else-if="rejectionScore <= 0" class="center">
+        <h4 class="text-center w-100 mt-5">הניקוד שלך הוא {{score}}.</h4>
+        <h4 class="text-center w-100">לא נורא נסה לשחק שוב</h4>
+         <ButtonLink text="שחק שוב" selectRouteColor="#ee9b36e6" link="" @customEvent="playAgain" backColor="#ffae4db8" backColorHov="#ffae4dd9" class="center m-1" />
       </div>
       <boxTest v-else class="mt-md-5 mt-4" :correntLetter="correntLetter" :playList="playList" :key="correntLetter.id"
         @clickNextLetter="changeIndex('+')" @incScore="incScore" :speedOfTest="speedOfTest" :level="level"
@@ -84,6 +86,12 @@
           this.score = this.score - 5;
           this.rejectionScore = this.score;
         }
+      },
+      playAgain() {
+        this.index = 0;
+        this.level = 1;
+        this.rejectionScore = 5;
+        this.score = 0
       }
     },
     computed: {
