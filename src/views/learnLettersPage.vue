@@ -5,7 +5,7 @@
       <div class="row center">
         <!-- <div class="col center"> -->
         <ButtonLink text="" @customEvent="playList = !playList" selectRouteColor="#ee9b36e6" link=""
-          backColor="#ffae4db8" backColorHov="#ffae4dd9" class="center col-md-3 col-8 h5 p-2 w-50">
+          backColor="#ffae4db8" backColorHov="#ffae4dd9" class="center col-md-1 col-3 h5 p-2 w-50">
           <!-- {{playList? 'עצור': 'השמעה ברצף'}} -->
           <i class="m-2" :class="playList? 'fas fa-stop': 'fas fa-play'"></i>
         </ButtonLink>

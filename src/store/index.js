@@ -12,7 +12,7 @@ export default new Vuex.Store({
       id: 1
     },
     {
-      name: "חזרה על שמות האותיות",
+      name: "משחק חזרה על שמות האותיות",
       link: "/testOnLetters",
       category: 1,
       id: 12
@@ -24,7 +24,7 @@ export default new Vuex.Store({
       id: 2
     },
     {
-      name: "חזרה על שמות הנקודות",
+      name: "משחק חזרה על שמות הנקודות",
       link: "/asd",
       category: 2,
       id: 22

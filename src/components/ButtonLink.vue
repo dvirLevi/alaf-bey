@@ -71,8 +71,13 @@
     border: none;
     outline: none;
     background-color: rgba(255, 255, 255, 0);
+    padding: 10px 20px;
   }
 
 
-  @media (max-width: 767.98px) {}
+  @media (max-width: 767.98px) {
+    button {
+    padding: 5px 10px;
+  }
+  }
 </style>

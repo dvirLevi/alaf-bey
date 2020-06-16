@@ -18,33 +18,44 @@
     },
     props: {
       correntLetter: Object,
+      speedOfTest: Number,
+      // score: Number,
+      // level: Number
       // playList: Boolean
     },
     data() {
       return {
-
+        ifClick: true,
+        // rejectionScore: 5,
       }
     },
     mounted() {
       this.playSound();
+      setTimeout(() => {
+        this.$emit('clickNextLetter')
+      }, this.speedOfTest)
     },
     methods: {
       playSound() {
         this.$refs.sound.play();
       },
       clickNextLetter(ifCorrect) {
-        let audioElement;
-        if (ifCorrect) {
-          audioElement = new Audio('audio/good.wav');
-          audioElement.play();
-          audioElement.onended = () => {
-            this.$emit('clickNextLetter')
+        if (this.ifClick) {
+          let audioElement;
+          if (ifCorrect) {
+            this.ifClick = false;
+            this.$emit('incScore', ifCorrect)
+            audioElement = new Audio('audio/good.wav');
+            audioElement.play();
+            audioElement.onended = () => {
+              this.$emit('clickNextLetter')
+            }
+          } else {
+            // this.rejectionScore = this.score;
+            audioElement = new Audio('audio/nogood.wav');
+            audioElement.play();
             this.$emit('incScore', ifCorrect)
           }
-        } else {
-          audioElement = new Audio('audio/nogood.wav');
-          audioElement.play();
-          this.$emit('incScore', ifCorrect)
         }
       },
       palyNameOfLetter() {

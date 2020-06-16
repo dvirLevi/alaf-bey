@@ -514,7 +514,7 @@
             sound: "audio/letters/28.wav",
             answers: [
               {
-                letter: "צ",
+                letter: "ץ",
                 ifCorrect: true
               },
               {

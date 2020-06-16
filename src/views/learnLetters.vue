@@ -40,13 +40,13 @@
 .width-link {
 width: 30%;
 font-size: 20px;
-padding: 10px 20px;
+/* padding: 10px 20px; */
 }
  @media (max-width: 767.98px) {
    .width-link {
 width: 40%;
 font-size: 14px;
-padding: 5px 10px;
+/* padding: 5px 10px; */
 }
  }
 </style>

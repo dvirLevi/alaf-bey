@@ -1,15 +1,31 @@
 <template>
   <div class="w-100 center wrap-box">
-    <div class="w-100 center score h4" v-if="boxOf === 'test'">
-      ניקוד: {{score}} 
-    </div>
+    <template v-if="boxOf === 'test'">
+      <div class="w-100 center score h1 m-0 mt-md-5 mt-3 text-bold">
+        שלב: {{level}}
+      </div>
+      <div class="w-100 center score h3 m-0 mt-3 text-bold">
+        ניקוד: {{score}}
+      </div>
+    </template>
     <div class="box-arrow" v-if="boxOf !== 'test'">
       <i class="fas fa-chevron-right c-p" @click.stop="changeIndex('-')"></i>
     </div>
     <boxLetter v-if="boxOf === 'letter'" :correntLetter="correntLetter" :playList="playList" :key="correntLetter.id"
       @clickNextLetter="changeIndex('+')" @autoNextLetter="changeIndex('+')" />
-    <boxTest v-if="boxOf === 'test'" :correntLetter="correntLetter" :playList="playList" :key="correntLetter.id"
-      @clickNextLetter="changeIndex('+')" @incScore="incScore" />
+    <template v-if="boxOf === 'test'">
+      <div v-if="level === 10">
+        <h2 class="text-center mt-4">הניקוד שלך הוא {{score}}</h2>
+        <h2 class="text-center">יופי! סיימת את המשחק בהצלחה</h2>
+      </div>
+      <div v-else-if="rejectionScore <= 0">
+        <h2 class="text-center mt-4">הניקוד שלך הוא {{score}}.</h2>
+        <h2 class="text-center">לא נורא נסה לשחק שוב</h2>
+      </div>
+      <boxTest v-else class="mt-md-5 mt-4" :correntLetter="correntLetter" :playList="playList" :key="correntLetter.id"
+        @clickNextLetter="changeIndex('+')" @incScore="incScore" :speedOfTest="speedOfTest" :level="level"
+        :score="score" />
+    </template>
     <div class="box-arrow" v-if="boxOf !== 'test'">
       <i class="fas fa-chevron-left c-p" @click.stop="changeIndex('+')"></i>
     </div>
@@ -35,7 +51,11 @@
     data() {
       return {
         index: 0,
-        score: 0
+        score: 0,
+        rejectionScore: 5,
+        speedOfTest: 20000,
+        previousScore: 50,
+        level: 1
       }
     },
     methods: {
@@ -53,9 +73,17 @@
         }
       },
       incScore(ifInc) {
-        console.log(ifInc)
-        if(ifInc){this.score = this.score+10}
-        else if(this.score) {this.score = this.score-5}
+        if (ifInc) {
+          this.score = this.score + 10;
+          if (this.previousScore <= this.score) {
+            this.speedOfTest = this.speedOfTest - 2000;
+            this.previousScore = this.score + 50;
+            this.level++;
+          }
+        } else if (this.score) {
+          this.score = this.score - 5;
+          this.rejectionScore = this.score;
+        }
       }
     },
     computed: {
@@ -67,9 +95,9 @@
 </script>
 
 <style scoped>
-  .wrap-box {
+  /* .wrap-box {
     height: 55vh;
-  }
+  } */
 
   .box-arrow i {
     width: 10%;
