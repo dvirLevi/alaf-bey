@@ -23,7 +23,37 @@ const routes = [{
       component: () => import('../views/testOnLetters.vue'),
     },
      ]
-  }
+  },
+  {
+    path: '/learnSounds',
+    component: () => import('../views/learnSounds.vue'),
+    children: [{
+      path: '/',
+      name: 'learnSounds',
+      component: () => import('../views/learnSoundsPage.vue'),
+    },
+    {
+      path: '/testOnSounds',
+      name: 'testOnSounds',
+      component: () => import('../views/testOnSounds.vue'),
+    },
+     ]
+  },
+  {
+    path: '/learnLettersAndSounds',
+    component: () => import('../views/learnLettersAndSounds.vue'),
+    children: [{
+      path: '/',
+      name: 'learnLettersAndSoundsPage',
+      component: () => import('../views/learnLettersAndSoundsPage.vue'),
+    },
+    // {
+    //   path: '/testOnSounds',
+    //   name: 'testOnSounds',
+    //   component: () => import('../views/testOnSounds.vue'),
+    // },
+     ]
+  },
 ]
 
 const router = new VueRouter({

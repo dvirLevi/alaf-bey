@@ -1,7 +1,7 @@
 <template>
   <div class="box-letter center">
-    <div class="c-p letter" @click="clickNextLetter(item.ifCorrect)" v-for="item in shuffleAnswers" :key="item.letter">
-      {{item.letter}}</div>
+    <div class="c-p letter" @click="clickNextLetter(item.ifCorrect)" v-for="item in shuffleAnswers" :key="item.letter" v-html="item.letter">
+      </div>
     <audio ref="sound" @ended.once="palyNameOfLetter" src="audio/where.wav"></audio>
   </div>
 </template>

@@ -19,22 +19,28 @@ export default new Vuex.Store({
     },
     {
       name: "לימוד שמות הנקודות",
-      link: "/asd",
+      link: "/learnSounds",
       category: 2,
       id: 2
     },
     {
       name: "משחק חזרה על שמות הנקודות",
-      link: "/asd",
+      link: "/testOnSounds",
       category: 2,
       id: 22
     },
     {
       name: "לימוד הגיית האותיות והנקודות",
-      link: "/asd",
-      category: 0,
+      link: "/learnLettersAndSounds",
+      category: 3,
       id: 3
     },
+    // {
+    //   name: "משחק חזרה על האותיות והנקודות",
+    //   link: "/asd",
+    //   category: 3,
+    //   id: 33
+    // },
     {
       name: "שינון פסוקים",
       link: "/asd",

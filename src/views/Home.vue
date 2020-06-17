@@ -50,12 +50,12 @@
           },
           {
             name: "לימוד שמות הנקודות",
-            link: "/asd",
+            link: "/learnSounds",
             id: 2
           },
           {
             name: "לימוד הגיית האותיות והנקודות",
-            link: "/asd",
+            link: "/learnLettersAndSounds",
             id: 3
           },
           {

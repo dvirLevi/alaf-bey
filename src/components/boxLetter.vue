@@ -1,6 +1,6 @@
 <template>
   <div class="box-letter center">
-    <p class="c-p" @click="clickNextLetter">{{correntLetter.letter}}</p>
+    <p class="c-p" @click="clickNextLetter" v-html="correntLetter.letter"></p>
     <audio ref="sound" @ended="autoNextLetter" :src="correntLetter.sound"></audio>
   </div>
 </template>
@@ -38,7 +38,7 @@
           if (this.playList) {
             this.$emit('autoNextLetter')
           }
-        }, 500)
+        }, 800)
       }
     },
     watch: {
