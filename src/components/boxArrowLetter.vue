@@ -1,13 +1,15 @@
 <template>
   <div class="w-100 center wrap-box">
-    <template v-if="boxOf === 'test'">
-      <div class="w-100 center h1 m-0 mt-md-5 mt-3 level">
+    <div class="w-100 center mt-md-5 mt-4" v-if="boxOf === 'test'">
+      <div class="center h1 m-2  level">
         <i class="fas fa-star"></i> שלב: <span :class="{ 'level-num-animation': ifAnimationLevel }">{{level}}</span>
       </div>
-      <div class="w-100 center h3 m-0 mt-1 score">
-        <i class="fas fa-gem" :class="{ 'score-icon-animation': ifAnimatioScore }"></i> ניקוד: {{score}}
+      <div class="center h3 m-2 score">
+        <i class="fas fa-gem"
+          :class="{ 'score-icon-animation': ifAnimatioScore, 'wrong-ans-animation': ifAnimatioWrongAns, }"></i> ניקוד:
+        {{score}}
       </div>
-    </template>
+    </div>
     <div class="box-arrow" v-if="boxOf !== 'test'">
       <i class="fas fa-chevron-right c-p" @click.stop="changeIndex('-')"></i>
     </div>
@@ -24,7 +26,7 @@
         <h4 class="text-center w-100">לא נורא נסה לשחק שוב</h4>
         <ButtonLink text="שחק שוב" link="" @customEvent="playAgain" class="center m-1" />
       </div>
-      <boxTest v-else class="mt-md-5 mt-4" :correntLetter="correntLetter" :playList="playList" :key="correntLetter.id"
+      <boxTest v-else class="mt-5" :correntLetter="correntLetter" :playList="playList" :key="correntLetter.id"
         @clickNextLetter="changeIndex('+')" @incScore="incScore" :speedOfTest="speedOfTest" :level="level"
         :score="score" />
     </template>
@@ -59,7 +61,8 @@
         previousScore: 50,
         level: 1,
         ifAnimatioScore: false,
-        ifAnimationLevel: false
+        ifAnimationLevel: false,
+        ifAnimatioWrongAns: false
       }
     },
     methods: {
@@ -80,19 +83,23 @@
         if (ifInc) {
           this.score = this.score + 10;
           this.ifAnimatioScore = true
-          setTimeout(()=>{
+          setTimeout(() => {
             this.ifAnimatioScore = false
           }, 1000)
           if (this.previousScore <= this.score) {
             this.speedOfTest = this.speedOfTest - 2000;
             this.previousScore = this.score + 50;
             this.ifAnimationLevel = true;
-             setTimeout(()=>{
-            this.ifAnimationLevel = false
-          }, 1000)
+            setTimeout(() => {
+              this.ifAnimationLevel = false
+            }, 1000)
             this.level++;
           }
         } else if (this.score) {
+          this.ifAnimatioWrongAns = true;
+          setTimeout(() => {
+            this.ifAnimatioWrongAns = false
+          }, 1000)
           this.score = this.score - 5;
           this.rejectionScore = this.score;
         }
@@ -152,7 +159,7 @@
       transform: scale(1) rotate(0deg);
     }
 
-     80% {
+    80% {
       transform: scale(1.3) rotate(10deg);
     }
 
@@ -167,11 +174,11 @@
 
   @keyframes level-num {
     0% {
-      transform: scale(1) ;
+      transform: scale(1);
       opacity: 1;
     }
 
-     99% {
+    99% {
       transform: scale(2);
       opacity: 0.2;
     }
@@ -182,10 +189,53 @@
     }
   }
 
+  .wrong-ans-animation {
+    animation: wrong-ans 0.5s;
+  }
+
+  @keyframes wrong-ans {
+    0% {
+      transform: translateX(0px);
+    }
+
+    25% {
+      transform: translateX(5px);
+    }
+
+    50% {
+      transform: translateX(-5px);
+    }
+
+    75% {
+      transform: translateX(5px);
+    }
+
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
   @media (max-width: 767.98px) {
 
     .box-arrow i {
       font-size: 45px;
+    }
+
+    .level {
+
+      font-size: 22px;
+    }
+
+    .score {
+      font-size: 22px;
+    }
+
+
+
+    .score i,
+    .level i {
+      font-size: 25px;
+      margin: 5px;
     }
   }
 </style>
