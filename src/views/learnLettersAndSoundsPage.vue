@@ -3,7 +3,7 @@
     <div class="col">
       <div class="row">
         <div class="col center">
-          <ButtonLink v-for="item in soundsTypes" :key="item.id" text="" @customEvent="typeOfSound = item.id" link="" class="center col-md-1 col-2 m-1 p-0 h6 w-50">
+          <ButtonLink v-for="item in soundsTypes" :key="item.id" text="" @customEvent="typeOfSound = item.id" link="" class="center col-md-1 col-2 m-1 p-0 h5 w-50">
             {{item.letter}}
           </ButtonLink>
         </div>

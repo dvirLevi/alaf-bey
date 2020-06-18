@@ -104,7 +104,8 @@ width: 20%;
   }
 
   .box-butt {
-    background-color: #ffe4c4b8;
+    background-color: #f25f51d1;
+    color: #fff;
     font-size: 30px;
     border-radius: 8px;
     font-weight: 400;
