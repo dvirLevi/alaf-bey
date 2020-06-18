@@ -19,17 +19,20 @@
       },
       backColor: {
         type: String,
-        default: '#df262d'
+        default: '#f25f51'
       },
       backColorHov: {
         type: String,
-        default: '#cc1a21'
+        default: '#ee4535'
       },
       textColor: {
         type: String,
         default: '#fff'
       },
-      selectRouteColor: String
+      selectRouteColor: {
+        type: String,
+        default: '#ee4535'
+      },
     },
     data() {
       return {
@@ -63,6 +66,7 @@
   .my-button {
     border-radius: 8px;
     font-weight: 400;
+    box-shadow: 1px 1px 10px #00000029;
   }
 
   button {

@@ -54,7 +54,7 @@
                 ifCorrect: false
               },
               {
-                letter: "#&1458",
+                letter: "&#1458",
                 ifCorrect: false
               },
             ],

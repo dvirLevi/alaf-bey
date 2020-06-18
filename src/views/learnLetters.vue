@@ -3,7 +3,7 @@
     <div class="col">
       <div class="row">
         <div class="col center">
-          <ButtonLink v-for="item in categories" :key="item.id" :text="item.name" selectRouteColor="#ee9b36e6" :link="item.link" backColor="#ffae4db8" backColorHov="#ffae4dd9" class="width-link center m-1" />
+          <ButtonLink v-for="item in categories" :key="item.id" :text="item.name" :link="item.link" class="width-link center m-1" />
         </div>
       </div>
       <router-view />
