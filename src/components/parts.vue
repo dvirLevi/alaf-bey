@@ -1,5 +1,5 @@
 <template>
-  <p class="h1 c-p mt-md-4 mt-1" @click="$emit('customEvent', correntIndex)" :class="{'active-color': ifCorrentPart}">
+  <p class="c-p mt-md-4 mt-1" @click="$emit('customEvent', correntIndex)" :class="{'active-color': ifCorrentPart}">
     {{item.text}}
   </p>
 </template>
@@ -45,11 +45,17 @@
 <style scoped>
   p {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
   }
 
   .active-color {
     color: #ee4535;
+    /* font-weight: 600; */
   }
 
-  @media (max-width: 767.98px) {}
+  @media (max-width: 767.98px) {
+     p {
+    font-size: 33px;
+  }
+  }
 </style>
