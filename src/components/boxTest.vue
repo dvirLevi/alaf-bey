@@ -1,8 +1,12 @@
 <template>
   <div class="box-letter center">
-    <div class="c-p letter" @click="clickNextLetter(item.ifCorrect)" v-for="item in shuffleAnswers" :key="item.letter" v-html="item.letter">
-      </div>
+    <div class="c-p letter" @click="clickNextLetter(item.ifCorrect)" v-for="item in shuffleAnswers" :key="item.letter"
+      v-html="item.letter">
+    </div>
     <audio ref="sound" @ended.once="palyNameOfLetter" src="audio/where.wav"></audio>
+    <div class="img-feedback" v-if="feedback">
+      <img class="w-100" :src="feedback" alt="">
+    </div>
   </div>
 </template>
 
@@ -26,6 +30,10 @@
     data() {
       return {
         ifClick: true,
+        // ifAnimationFeedback: true,
+        feedback: '',
+        goodFeedback: require('@/assets/ass1.png'),
+        BadFeedback: require('@/assets/ass2.png'),
         // rejectionScore: 5,
       }
     },
@@ -43,6 +51,10 @@
         if (this.ifClick) {
           let audioElement;
           if (ifCorrect) {
+            this.feedback = require('@/assets/ass2.png');
+            setTimeout(() => {
+              this.feedback = ''
+            }, 2000)
             this.ifClick = false;
             this.$emit('incScore', ifCorrect)
             audioElement = new Audio('audio/good.wav');
@@ -51,7 +63,10 @@
               this.$emit('clickNextLetter')
             }
           } else {
-            // this.rejectionScore = this.score;
+            this.feedback = require('@/assets/ass1.png');
+            setTimeout(() => {
+              this.feedback = ''
+            }, 2000)
             audioElement = new Audio('audio/nogood.wav');
             audioElement.play();
             this.$emit('incScore', ifCorrect)
@@ -83,6 +98,7 @@
   .box-letter {
     font-family: 'shofarregular';
     width: 80%;
+    position: relative;
   }
 
   .box-letter .letter {
@@ -90,6 +106,30 @@
     font-size: 200px;
     width: 33%;
     -webkit-user-select: none;
+  }
+
+  .img-feedback {
+    width: 200px;
+    opacity: 0;
+    position: absolute;
+    animation: img-feedback 2s;
+  }
+
+  @keyframes img-feedback {
+    0% {
+      width: 0px;
+      opacity: 0.5;
+    }
+
+    60% {
+      width: 200px;
+      opacity: 1;
+    }
+
+    100% {
+      width: 200px;
+      opacity: 0;
+    }
   }
 
   @media (max-width: 767.98px) {
