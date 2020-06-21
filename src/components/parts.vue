@@ -1,5 +1,5 @@
 <template>
-  <p class="h1 c-p mt-4" @click="$emit('customEvent', correntIndex)" :class="{'active-color': ifCorrentPart}">
+  <p class="h1 c-p mt-md-4 mt-1" @click="$emit('customEvent', correntIndex)" :class="{'active-color': ifCorrentPart}">
     {{item.text}}
   </p>
 </template>

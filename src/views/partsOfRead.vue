@@ -12,7 +12,7 @@
       </div>
       <div class="row mt-4">
         <div class="col center">
-          <ButtonLink text="" @customEvent="playList = !playList" link="" class="center col-md-1 col-3 h5 p-2 w-50">
+          <ButtonLink text="" @customEvent="playList = !playList" link="" class="center col-md-1 col-3 h3 p-2 w-50">
             <i class="m-2" :class="playList? 'fas fa-stop': 'fas fa-play'"></i>
           </ButtonLink>
         </div>
@@ -55,7 +55,11 @@
         this.$refs.sound.play();
         this.$refs.sound.onended = () => {
           if (this.playList) {
-            this.playSound(index + 1)
+            if (this.letterAndSound.length - 1 === this.index) {
+              this.playSound(0)
+            } else {
+              this.playSound(index + 1)
+            }
           }
         }
       },
