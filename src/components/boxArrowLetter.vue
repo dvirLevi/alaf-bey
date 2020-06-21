@@ -4,7 +4,7 @@
       <div class="center h1 m-2  level">
         <i class="fas fa-star"></i> שלב: <span :class="{ 'level-num-animation': ifAnimationLevel }">{{level}}</span>
       </div>
-      <div class="center h3 m-2 score">
+      <div class="center h1 m-2 score">
         <i class="fas fa-gem"
           :class="{ 'score-icon-animation': ifAnimatioScore, 'wrong-ans-animation': ifAnimatioWrongAns, }"></i> ניקוד:
         {{score}}
@@ -40,6 +40,7 @@
   // @ is an alias to /src
   import boxLetter from '@/components/boxLetter.vue'
   import boxTest from '@/components/boxTest.vue'
+  import {changeIndex} from '@/mixins/changeIndex.js'
 
   export default {
     name: 'Home',
@@ -52,6 +53,7 @@
       playList: Boolean,
       boxOf: String
     },
+     mixins: [changeIndex],
     data() {
       return {
         index: 0,
@@ -66,19 +68,19 @@
       }
     },
     methods: {
-      changeIndex(action) {
-        if (this.index > 0) {
-          if (action === '-') this.index--
-          if (this.letterAndSound.length - 1 > this.index) {
-            if (action === '+') this.index++
-          } else {
-            if (action === '+') this.index = 0
-          }
-        } else if (this.index === 0) {
-          if (action === '+') this.index++;
-          if (action === '-') this.index = this.letterAndSound.length - 1;
-        }
-      },
+      // changeIndex(action) {
+      //   if (this.index > 0) {
+      //     if (action === '-') this.index--
+      //     if (this.letterAndSound.length - 1 > this.index) {
+      //       if (action === '+') this.index++
+      //     } else {
+      //       if (action === '+') this.index = 0
+      //     }
+      //   } else if (this.index === 0) {
+      //     if (action === '+') this.index++;
+      //     if (action === '-') this.index = this.letterAndSound.length - 1;
+      //   }
+      // },
       incScore(ifInc) {
         if (ifInc) {
           this.score = this.score + 10;

@@ -43,7 +43,7 @@ export default new Vuex.Store({
     // },
     {
       name: "שינון פסוקים",
-      link: "/asd",
+      link: "/readingPart",
       category: 0,
       id: 4
     },

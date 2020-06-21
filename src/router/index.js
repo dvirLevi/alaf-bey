@@ -54,6 +54,18 @@ const routes = [{
     // },
      ]
   },
+  {
+    path: '/readingPart',
+    name: 'readingPart',
+    component: () => import('../views/readingPart.vue'),
+  },
+  {
+    path: '/partsOfRead/:id',
+    name: 'partsOfRead',
+    component: () => import('../views/partsOfRead.vue'),
+  },
+  
+  
 ]
 
 const router = new VueRouter({

@@ -60,7 +60,7 @@
           },
           {
             name: "שינון פסוקים",
-            link: "/asd",
+            link: "/readingPart",
             id: 4
           },
         ]
