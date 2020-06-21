@@ -44,7 +44,7 @@
 
 <style scoped>
   p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
     font-size: 40px;
   }
 
@@ -54,8 +54,8 @@
   }
 
   @media (max-width: 767.98px) {
-     p {
-    font-size: 33px;
-  }
+    p {
+      font-size: 33px;
+    }
   }
 </style>

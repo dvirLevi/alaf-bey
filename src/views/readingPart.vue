@@ -1,11 +1,11 @@
 <template>
   <div class="row">
     <div class="col">
-      <div class="row">
-        <div class="col center">
+      <div class="row  center">
+        <!-- <div class="col center"> -->
           <ButtonLink v-for="item in partsReading" :key="item.id" :text="item.partsOfRead[0].text" :link="'/partsOfRead/' + item.id"
-            class="w-75 center h4 m-1" />
-        </div>
+            class="col-md-7 center h5 mt-2" />
+        <!-- </div> -->
       </div>
     </div>
   </div>

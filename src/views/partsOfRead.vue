@@ -10,12 +10,12 @@
           <!-- </p> -->
         </div>
       </div>
-      <div class="row mt-4">
-        <div class="col center">
-          <ButtonLink text="" @customEvent="playList = !playList" link="" class="center col-md-1 col-3 h3 p-2 w-50">
+      <div class="row center mt-4 pt-4 border-top">
+        <!-- <div class="col center"> -->
+          <ButtonLink text="" @customEvent="playList = !playList" link="" class="center col-md-1 col-3 h3 p-0">
             <i class="m-2" :class="playList? 'fas fa-stop': 'fas fa-play'"></i>
           </ButtonLink>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
   </div>
