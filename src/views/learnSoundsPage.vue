@@ -2,8 +2,8 @@
   <div class="row">
     <div class="col">
       <boxArrowLetter :letterAndSound="letterAndSound" :playList="playList" boxOf="letter" />
-      <div class="row center">
-        <ButtonLink text="" @customEvent="playList = !playList" link="" class="center col-md-1 col-3 h5 p-2 w-50">
+      <div class="row center pt-4 border-top">
+        <ButtonLink text="" @customEvent="playList = !playList" link="" class="center col-md-1 col-3 h3 p-0">
           <i class="m-2" :class="playList? 'fas fa-stop': 'fas fa-play'"></i>
         </ButtonLink>
       </div>
