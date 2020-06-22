@@ -45,7 +45,8 @@
 <style scoped>
   p {
     font-family: Arial;
-    font-size: 40px;
+    font-size: 37px;
+    font-weight: 700;
   }
 
   .active-color {

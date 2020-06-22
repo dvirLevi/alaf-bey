@@ -1,36 +1,30 @@
 <template>
-  <!-- <div class="row row-sticky"> -->
-  <!-- <div class="col"> -->
   <div class="bac-menu" @click="$emit('close')">
     <div class=" wrap-items p-2">
-      <!-- <div class="box-img center-all pl-5 mb-5 mt-5">
-        <img class="w-100" src="../assets/logo-red.png" alt="">
-      </div> -->
       <div class="w-100 center-right p-2">
-      <logo />
+        <logo />
       </div>
       <router-link class="items-menu" :to="item.link" v-for="item in categories" :key="item.id">
         {{item.name}}
       </router-link>
     </div>
   </div>
-
 </template>
 
 <script>
-import logo from '@/components/logo.vue'
+  import logo from '@/components/logo.vue'
 
   export default {
     name: 'menus',
     components: {
-logo
+      logo
     },
     props: {
 
     },
     data() {
       return {
-       
+
 
       }
     },
@@ -44,7 +38,6 @@ logo
 
     }
   }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -114,7 +107,7 @@ logo
     }
 
     100% {
-       padding: 15px 10px;
+      padding: 15px 10px;
     }
   }
 
@@ -125,12 +118,11 @@ logo
     }
 
     .items-menu {
-      font-size: 18px;
+      font-size: 17px;
     }
 
     /* .box-img {
       width: 100px;
     } */
   }
-
 </style>
