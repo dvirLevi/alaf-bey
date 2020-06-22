@@ -4,6 +4,13 @@
     <div class="container">
       <router-view />
     </div>
+    <footer>
+      <div class="row mt-3">
+        <div class="col border-top pt-3 pb-2 center">
+          <p class="h6"><a href="https://apps-life.netlify.app" target="_blanc">נבנה ופותח בAppsLife</a></p>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -20,14 +27,18 @@
 </script>
 
 <style scoped>
-.container-fluid {
-  background-color: #f5f5dc41;
-  min-height: 100vh;
-}
+  .container-fluid {
+    background-color: #f5f5dc41;
+    min-height: 100vh;
+  }
 
-/* .container {
-    min-height: calc(100vh - 125px);
+  .container {
+    min-height: calc(100vh - 190px);
+  }
 
-} */
-
+  @media (max-width: 767.98px) {
+    .container {
+      min-height: calc(100vh - 165px);
+    }
+  }
 </style>
