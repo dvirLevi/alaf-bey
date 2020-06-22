@@ -23,6 +23,7 @@
     text-align: center;
     width: 90px;
     height: 90px;
+    color: inherit;
   }
 
   .row-logo::after {
