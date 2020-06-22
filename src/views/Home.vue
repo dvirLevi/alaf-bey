@@ -100,7 +100,7 @@ width: 20%;
   }
 
    .row-home h2 {
-    font-weight: 400;
+    font-weight: 800;
   }
 
   .box-butt {

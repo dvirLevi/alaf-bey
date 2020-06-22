@@ -3,14 +3,14 @@
     <div class="col">
       <div class="row">
         <div class="col center">
-          <ButtonLink v-for="item in soundsTypes" :key="item.id" text="" @customEvent="typeOfSound = item.id" link="" class="center col-md-1 col-2 m-1 p-0 h5 w-50">
+          <ButtonLink v-for="item in soundsTypes" :key="item.id" text="" @customEvent="typeOfSound = item.id" link="" class="center col-md-1 col-2 m-1 p-0 h6">
             {{item.letter}}
           </ButtonLink>
         </div>
       </div>
       <boxArrowLetter :letterAndSound="letterAndSound" :key="typeOfSound" :playList="playList" boxOf="letter" />
-      <div class="row center">
-        <ButtonLink text="" @customEvent="playList = !playList" link="" class="center col-md-1 col-3 h5 p-2">
+      <div class="row center pt-4 border-top">
+        <ButtonLink text="" @customEvent="playList = !playList" link="" class="center col-md-1 col-3 h3 p-0">
           <i class="m-2" :class="playList? 'fas fa-stop': 'fas fa-play'"></i>
         </ButtonLink>
       </div>

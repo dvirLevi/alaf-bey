@@ -1,10 +1,15 @@
 <template>
   <div class="row">
     <div class="col">
+      <div class="row">
+        <div class="col center">
+          <h2>שינון פסוקים</h2>
+        </div>
+      </div>
       <div class="row  center">
         <!-- <div class="col center"> -->
           <ButtonLink v-for="item in partsReading" :key="item.id" :text="item.partsOfRead[0].text" :link="'/partsOfRead/' + item.id"
-            class="col-md-7 center h5 mt-2" />
+            class="col-md-7 center h5 mt-2 p-2" />
         <!-- </div> -->
       </div>
     </div>

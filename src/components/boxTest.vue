@@ -52,9 +52,9 @@
           let audioElement;
           if (ifCorrect) {
             this.feedback = require('@/assets/ass2.png');
-            setTimeout(() => {
-              this.feedback = ''
-            }, 2000)
+            // setTimeout(() => {
+            //   this.feedback = ''
+            // }, 2000)
             this.ifClick = false;
             this.$emit('incScore', ifCorrect)
             audioElement = new Audio('audio/good.wav');
