@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col">
       <div class="row center">
-        <div class="col-md-4">
+        <div class="col-md-4 parts">
           <!-- <p class="h3"> -->
           <parts v-for="(item, correntIndex) in letterAndSound" :item="item" :index="index" :correntIndex="correntIndex"
             :key="item.id" @customEvent="playSound" />
@@ -12,9 +12,9 @@
       </div>
       <div class="row center mt-4 pt-4 border-top">
         <!-- <div class="col center"> -->
-          <ButtonLink text="" @customEvent="playList = !playList" link="" class="center col-md-1 col-3 h3 p-0">
-            <i class="m-2" :class="playList? 'fas fa-stop': 'fas fa-play'"></i>
-          </ButtonLink>
+        <ButtonLink text="" @customEvent="playList = !playList" link="" class="center col-md-1 col-3 h3 p-0">
+          <i class="m-2" :class="playList? 'fas fa-stop': 'fas fa-play'"></i>
+        </ButtonLink>
         <!-- </div> -->
       </div>
     </div>
@@ -89,5 +89,9 @@
 </script>
 
 <style scoped>
+  .parts {
+    background-color: #f25f510d;
+  }
+
   @media (max-width: 767.98px) {}
 </style>

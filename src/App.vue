@@ -31,7 +31,7 @@
   }
 
   .container {
-    min-height: calc(100vh - 190px);
+    min-height: calc(100vh - 175px);
   }
 
   footer {
@@ -41,7 +41,7 @@
 
   @media (max-width: 767.98px) {
     .container {
-      min-height: calc(100vh - 165px);
+      min-height: calc(100vh - 101px);
     }
   }
 </style>
