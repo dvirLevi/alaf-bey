@@ -25,7 +25,7 @@
         // playList: false,
         letterAndSound: [
           {
-            sound: "audio/letters/1.wav",
+            sound: "audio/name-of-sounds/1.wav",
             answers: [
               {
                 letter: "&#1464",
