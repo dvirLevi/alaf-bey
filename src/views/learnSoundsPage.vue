@@ -26,63 +26,83 @@
         letterAndSound: [
           {
             letter: "&#1464",
-            sound: "audio/letters/1.wav",
+            sound: "audio/name-of-sounds/1.wav",
             id: 1
           },
           {
             letter: "&#1459",
-            sound: "audio/letters/1.wav",
+            sound: "audio/name-of-sounds/2.wav",
             id: 11
           },
           {
             letter: "&#1463",
-            sound: "audio/letters/2.wav",
+            sound: "audio/name-of-sounds/3.wav",
             id: 2
           },
           {
             letter: "&#1458",
-            sound: "audio/letters/2.wav",
+            sound: "audio/name-of-sounds/4.wav",
             id: 22
           },
           {
             letter: "&#1462",
-            sound: "audio/letters/3.wav",
+            sound: "audio/name-of-sounds/5.wav",
             id: 3
           },
           {
             letter: "&#1457",
-            sound: "audio/letters/3.wav",
+            sound: "audio/name-of-sounds/6.wav",
             id: 33
           },
           {
             letter: "&#1461",
-            sound: "audio/letters/4.wav",
+            sound: "audio/name-of-sounds/7.wav",
             id: 4
           },
+          // {
+          //   letter: "&#1460",
+          //   sound: "audio/name-of-sounds/8.wav",
+          //   id: 5
+          // },
           {
-            letter: "&#1460",
-            sound: "audio/letters/5.wav",
+            letter: "אִ",
+            sound: "audio/name-of-sounds/8.wav",
             id: 5
           },
           {
-            letter: "&#1467",
-            sound: "audio/letters/6.wav",
-            id: 6
+            letter: "אִי",
+            sound: "audio/name-of-sounds/9.wav",
+            id: 55
           },
+          // {
+          //   letter: "&#1467",
+          //   sound: "audio/letters/6.wav",
+          //   id: 6
+          // },
           {
             letter: "&#1456",
-            sound: "audio/letters/7.wav",
+            sound: "audio/name-of-sounds/11.wav",
             id: 7
           },
           {
-            letter: "וֹ",
-            sound: "audio/letters/8.wav",
+            letter: "אוֹֹ",
+            sound: "audio/name-of-sounds/12.wav",
             id: 8
           },
           {
+            letter: "אֹ",
+            sound: "audio/name-of-sounds/13.wav",
+            id: 88
+          },
+          {
             letter: "וּ",
-            sound: "audio/letters/9.wav",
+            sound: "audio/name-of-sounds/14.wav",
             id: 9
+          },
+          {
+            letter: "וֻ",
+            sound: "audio/name-of-sounds/15.wav",
+            id: 99
           },
         ]
       }

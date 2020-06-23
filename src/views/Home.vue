@@ -13,12 +13,12 @@
       </div>
       <div class="row">
         <div class="col center mt-md-5 mt-2">
-          <h2>לימוד שמות האותיות לפי נוסח תימן</h2>
+          <h2>המרכז למורשת הרמב"ם ועדות ישראל מציג:</h2>
         </div>
       </div>
       <div class="row">
         <div class="col center mt-2">
-          <h2>לחזרה ופיתוח הלימוד עם האב</h2>
+          <h2>לימוד שמות האותיות לפי נוסח תימן</h2>
         </div>
       </div>
       <div class="row center mt-md-5 mt-4">
