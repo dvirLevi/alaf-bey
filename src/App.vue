@@ -4,12 +4,10 @@
     <div class="container">
       <router-view />
     </div>
-    <footer>
-      <div class="row mt-3">
-        <div class="col border-top pt-3 pb-2 center">
+    <footer class="row mt-3">
+        <div class="col pt-3 pb-2 center">
           <p class="h6"><a href="https://apps-life.netlify.app" target="_blanc">נבנה ופותח בAppsLife</a></p>
         </div>
-      </div>
     </footer>
   </div>
 </template>
@@ -34,6 +32,11 @@
 
   .container {
     min-height: calc(100vh - 190px);
+  }
+
+  footer {
+    background-color: #444;
+    color: #fff;
   }
 
   @media (max-width: 767.98px) {
