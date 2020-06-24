@@ -13,8 +13,8 @@
       </div>
       <div class="row">
         <div class="col center mt-md-5 mt-2">
-          <h2>המרכז למורשת הרמב"ם ועדות ישראל</h2>
-          <h2> שמחים להציג:</h2>
+          <h2>המרכז למורשת הרמב"ם ועדות ישראל<br class="mobile"> שמחים להציג:</h2>
+          <h2> </h2>
         </div>
       </div>
       <div class="row">
