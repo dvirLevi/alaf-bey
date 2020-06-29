@@ -8,7 +8,7 @@
       </div>
       <div class="row  center">
         <!-- <div class="col center"> -->
-          <ButtonLink v-for="item in partsReading" :key="item.id" :text="item.partsOfRead[0].text" :link="'/partsOfRead/' + item.id"
+          <ButtonLink v-for="item in partsReading" :key="item.id" :text="firstThreeWords(item.partsOfRead[0].text)" :link="'/partsOfRead/' + item.id"
             class="col-md-7 center h5 mt-2 p-2" />
         <!-- </div> -->
       </div>
@@ -30,10 +30,17 @@
        
       }
     },
+    methods: {
+firstThreeWords(words) {
+        let arr = words.split(" ");
+        return arr[0]+" "+arr[1]+" "+arr[2]
+      }
+    },
     computed: {
       partsReading() {
         return partsReading
-      }
+      },
+      
     }
   }
 </script>

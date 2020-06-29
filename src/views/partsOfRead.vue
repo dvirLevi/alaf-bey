@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col">
       <div class="row center">
-        <div class="col-md-4 parts">
+        <div class="col-md-8 parts">
           <!-- <p class="h3"> -->
           <parts v-for="(item, correntIndex) in letterAndSound" :item="item" :index="index" :correntIndex="correntIndex"
             :key="item.id" @customEvent="playSound" />
