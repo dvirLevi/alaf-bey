@@ -1,6 +1,6 @@
 <template>
   <div class="box-letter center">
-    <p class="c-p" @click="clickNextLetter" v-html="correntLetter.letter"></p>
+    <p class="c-p center" @click="clickNextLetter" v-html="correntLetter.letter"></p>
     <audio ref="sound" @ended="autoNextLetter" :src="correntLetter.sound"></audio>
   </div>
 </template>
@@ -31,6 +31,7 @@
         this.$refs.sound.play();
       },
       clickNextLetter() {
+        console.log('0000')
         this.$emit('clickNextLetter')
       },
       autoNextLetter() {
@@ -61,6 +62,8 @@
   .box-letter p {
     font-size: 350px;
     -webkit-user-select: none;
+    min-width: 50%;
+
   }
 
  
