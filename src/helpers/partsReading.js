@@ -55,7 +55,70 @@ const partsReading = [{
       },
     ],
     id: 2
-  }
+  },
+  {
+  partsOfRead: [{
+    text: "וּלְאָשֵׁ֣ר אָמַ֔ר בָּר֥וּךְ מִבָּנִ֖ים אָשֵׁ֑ר",
+    sound: "audio/olosher-omar/1.mp3",
+    id: 1
+  },
+  {
+    text: "יְהִ֤י רְצוּי֙ אֶחָ֔יו וְטֹבֵ֥ל בַּשֶּׁ֖מֶן רַגְלֽוֹ:",
+    sound: "audio/olosher-omar/2.mp3",
+    id: 2
+  },
+  {
+    text: "בַּרְזֶ֥ל וּנְח֖שֶׁת מִנְעָלֶ֑ךָ",
+    sound: "audio/olosher-omar/3.mp3",
+    id: 3
+  },
+  {
+    text: "וּכְיָמֶ֖יךָ דָּבְאֶֽךָ:",
+    sound: "audio/olosher-omar/4.mp3",
+    id: 4
+  },
+  {
+    text: "אֵ֥ין כָּאֵ֖ל יְשֻׁר֑וּן",
+    sound: "audio/olosher-omar/5.mp3",
+    id: 5
+  },
+  {
+    text: "רֹכֵ֤ב שָׁמַ֨יִם֙ בְּעֶזְרֶ֔ךָ וּבְגַֽאֲוָת֖וֹ שְׁחָקִֽים:",
+    sound: "audio/olosher-omar/6.mp3",
+    id: 6
+  },
+],
+id: 3
+},
+{
+  partsOfRead: [{
+    text: "תורה צוה לנו משה מורשה קהילת יעקב",
+    sound: "audio/toro-siwo/1.mp3",
+    id: 1
+  },
+  {
+    text: "וזאת התורה אשר שם משה לפני בני ישראל",
+    sound: "audio/toro-siwo/3.mp3",
+    id: 2
+  },
+  {
+    text: "כי לקח טוב נתתי לכם תורתי אל תעזובו",
+    sound: "audio/toro-siwo/4.mp3",
+    id: 3
+  },
+  {
+    text: "וחפץ יהוה בידנו יצלח",
+    sound: "audio/toro-siwo/5.mp3",
+    id: 4
+  },
+  {
+    text: "ברוך אתה יהוה למדני חוקך",
+    sound: "audio/toro-siwo/6.mp3",
+    id: 5
+  },
+],
+id: 4
+}
 ]
 
 export default partsReading

@@ -43,7 +43,7 @@
             id: 1
           },
           {
-            sound: "audio/letters/2.wav",
+            sound: "audio/name-of-sounds/2.wav",
             answers: [
               {
                 letter: "&#1459",
@@ -61,7 +61,7 @@
             id: 2
           },
           {
-            sound: "audio/letters/3.wav",
+            sound: "audio/name-of-sounds/3.wav",
             answers: [
               {
                 letter: "&#1463",
@@ -79,7 +79,7 @@
             id: 3
           },
           {
-            sound: "audio/letters/4.wav",
+            sound: "audio/name-of-sounds/4.wav",
             answers: [
               {
                 letter: "&#1458",
@@ -97,7 +97,7 @@
             id: 4
           },
           {
-            sound: "audio/letters/5.wav",
+            sound: "audio/name-of-sounds/5.wav",
             answers: [
               {
                 letter: "&#1462",
@@ -115,7 +115,7 @@
             id: 5
           },
           {
-            sound: "audio/letters/6.wav",
+            sound: "audio/name-of-sounds/6.wav",
             answers: [
               {
                 letter: "&#1457",
@@ -133,7 +133,7 @@
             id: 6
           },
           {
-            sound: "audio/letters/7.wav",
+            sound: "audio/name-of-sounds/7.wav",
             answers: [
               {
                 letter: "&#1461",
@@ -151,7 +151,7 @@
             id: 7
           },
           {
-            sound: "audio/letters/8.wav",
+            sound: "audio/name-of-sounds/8.wav",
             answers: [
               {
                 letter: "&#1460",
@@ -169,14 +169,14 @@
             id: 8
           },
           {
-            sound: "audio/letters/9.wav",
+            sound: "audio/name-of-sounds/9.wav",
             answers: [
               {
-                letter: "&#1467",
+                letter: "אִ",
                 ifCorrect: true
               },
               {
-                letter: "&#1456",
+                letter: "וֹ",
                 ifCorrect: false
               },
               {
@@ -187,7 +187,7 @@
             id: 9
           },
           {
-            sound: "audio/letters/10.wav",
+            sound: "audio/name-of-sounds/11.wav",
             answers: [
               {
                 letter: "&#1456",
@@ -205,10 +205,10 @@
             id: 10
           },
           {
-            sound: "audio/letters/11.wav",
+            sound: "audio/name-of-sounds/12.wav",
             answers: [
               {
-                letter: "וֹ",
+                letter: "אוֹ",
                 ifCorrect: true
               },
               {
@@ -223,7 +223,25 @@
             id: 11
           },
           {
-            sound: "audio/letters/12.wav",
+            sound: "audio/name-of-sounds/13.wav",
+            answers: [
+              {
+                letter: "אֹ",
+                ifCorrect: true
+              },
+              {
+                letter: "&#1457",
+                ifCorrect: false
+              },
+              {
+                letter: "אוֹ",
+                ifCorrect: false
+              },
+            ],
+            id: 12
+          },
+           {
+            sound: "audio/name-of-sounds/14.wav",
             answers: [
               {
                 letter: "וּ",
@@ -234,11 +252,29 @@
                 ifCorrect: false
               },
               {
-                letter: "&#1467",
+                letter: "וֹ",
                 ifCorrect: false
               },
             ],
-            id: 12
+            id: 13
+          },
+          {
+            sound: "audio/name-of-sounds/15.wav",
+            answers: [
+              {
+                letter: "&#1467",
+                ifCorrect: true
+              },
+              {
+                letter: "וּ",
+                ifCorrect: false
+              },
+              {
+                letter: "וֹ",
+                ifCorrect: false
+              },
+            ],
+            id: 14
           },
         ]
       }
