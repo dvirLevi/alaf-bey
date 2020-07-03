@@ -1,47 +1,78 @@
 class PlayerBubble {
-    constructor(letter, score) {
-        this.player = new Circle(30, "red");
-        this.ifCame = true;
+    constructor(typeOfPlayr, letter, score, color) {
+        this.typeOfPlayr = typeOfPlayr;
+        this.player = new Circle(30, color);
         this.letter = letter;
         this.label = new Label({
-            text: this.letter,
+            text: this.letter.letter,
             size: 40,
             font: "Varela Round",
-            color: "red",
+            color: color,
             bold: true,
         });
         this.circle = new Circle({
             min: 5,
             max: 10
-        }, 'red').alp(1)
-        this.score = score
+        }, color).alp(1);
+        this.fire = new Circle({
+            min: 5,
+            max: 10
+        }, '#d97445').alp(1)
+        this.score = score;
+        this.color = color
     }
     addPlayer(x, y) {
         this.player.pos(x, y).cur('pointer');
         this.player.addPhysics({
             bounciness: .8
         })
-        var label = new Label({
-            text: this.letter,
-            size: 40,
-            font: "Varela Round",
-            color: "white",
-            bold: true,
-        }).center(this.player);
-        label.center(this.player);
-        this.player.addChild(label)
+        if (this.typeOfPlayr === "good") {
+            var label = new Label({
+                text: this.letter.letter,
+                size: 40,
+                font: "Varela Round",
+                color: "white",
+                bold: true,
+            }).center(this.player);
+            label.center(this.player);
+            this.player.addChild(label)
+        }
+
     }
     testHit(stage, object, points) {
         Ticker.add(() => {
             // this.label.color = "red"
             if (this.player.hitTestRect(object, points)) {
-            let particle = (object.type === 'Line') ? this.circle : this.label;
-                if(object.type !== 'Line'){
-                    this.score.score = this.score.score + 5;
-                    console.log(this.score.score)
-                } else {
-                    this.score.score = this.score.score - 5
+                let particle;
+                if (this.typeOfPlayr === "good") {
+                    particle = (object.type === 'Line') ? this.circle : this.label;
+                    if (object.type !== 'Line') {
+                        this.score.score = this.score.score + 5;
+                        asset(this.letter.sound).play({
+                            volume: 3
+                        })
+                        asset("success.mp3").play({
+                            volume: .2
+                        })
+                        
+                    } else {
+                        if (this.score.score > 0) {
+                            this.score.score = this.score.score - 5
+                        }
+                    }
+                } else if (this.typeOfPlayr === "bad") {
+                    particle = [this.circle, this.fire];
+                    if (object.type !== 'Line') {
+                        if (this.score.score > 0) {
+                            this.score.score = this.score.score - 5
+                        }
+                        asset("boom.mp3").play({
+                            volume: .1
+                        })
+                    }
+                    
                 }
+
                 var emitter = new Emitter({
                     obj: particle,
                     num: 5,

@@ -25,7 +25,7 @@
         // playList: false,
         letterAndSound: [
           {
-            sound: "audio/letters/1.wav",
+            sound: "audio/letters/1.mp3",
             answers: [
               {
                 letter: "א",
@@ -43,7 +43,7 @@
             id: 1
           },
           {
-            sound: "audio/letters/2.wav",
+            sound: "audio/letters/2.mp3",
             answers: [
               {
                 letter: "בּ",
@@ -61,7 +61,7 @@
             id: 2
           },
           {
-            sound: "audio/letters/3.wav",
+            sound: "audio/letters/3.mp3",
             answers: [
               {
                 letter: "ב",
@@ -79,7 +79,7 @@
             id: 3
           },
           {
-            sound: "audio/letters/4.wav",
+            sound: "audio/letters/4.mp3",
             answers: [
               {
                 letter: "גּ",
@@ -97,7 +97,7 @@
             id: 4
           },
           {
-            sound: "audio/letters/5.wav",
+            sound: "audio/letters/5.mp3",
             answers: [
               {
                 letter: "ג",
@@ -115,7 +115,7 @@
             id: 5
           },
           {
-            sound: "audio/letters/6.wav",
+            sound: "audio/letters/6.mp3",
             answers: [
               {
                 letter: "דּ",
@@ -133,7 +133,7 @@
             id: 6
           },
           {
-            sound: "audio/letters/7.wav",
+            sound: "audio/letters/7.mp3",
             answers: [
               {
                 letter: "ד",
@@ -151,7 +151,7 @@
             id: 7
           },
           {
-            sound: "audio/letters/8.wav",
+            sound: "audio/letters/8.mp3",
             answers: [
               {
                 letter: "ה",
@@ -169,7 +169,7 @@
             id: 8
           },
           {
-            sound: "audio/letters/9.wav",
+            sound: "audio/letters/9.mp3",
             answers: [
               {
                 letter: "ו",
@@ -187,7 +187,7 @@
             id: 9
           },
           {
-            sound: "audio/letters/10.wav",
+            sound: "audio/letters/10.mp3",
             answers: [
               {
                 letter: "ז",
@@ -205,7 +205,7 @@
             id: 10
           },
           {
-            sound: "audio/letters/11.wav",
+            sound: "audio/letters/11.mp3",
             answers: [
               {
                 letter: "ח",
@@ -223,7 +223,7 @@
             id: 11
           },
           {
-            sound: "audio/letters/12.wav",
+            sound: "audio/letters/12.mp3",
             answers: [
               {
                 letter: "ט",
@@ -241,7 +241,7 @@
             id: 12
           },
           {
-            sound: "audio/letters/13.wav",
+            sound: "audio/letters/13.mp3",
              answers: [
               {
                 letter: "י",
@@ -259,7 +259,7 @@
             id: 13
           },
           {
-            sound: "audio/letters/14.wav",
+            sound: "audio/letters/14.mp3",
             answers: [
               {
                 letter: "כּ",
@@ -277,7 +277,7 @@
             id: 14
           },
           {
-            sound: "audio/letters/15.wav",
+            sound: "audio/letters/15.mp3",
             answers: [
               {
                 letter: "כ",
@@ -295,7 +295,7 @@
             id: 15
           },
            {
-            sound: "audio/letters/16.wav",
+            sound: "audio/letters/16.mp3",
             answers: [
               {
                 letter: "ך",
@@ -313,7 +313,7 @@
             id: 16
           },
           {
-            sound: "audio/letters/17.wav",
+            sound: "audio/letters/17.mp3",
             answers: [
               {
                 letter: "ל",
@@ -331,7 +331,7 @@
             id: 17
           },
           {
-            sound: "audio/letters/18.wav",
+            sound: "audio/letters/18.mp3",
             answers: [
               {
                 letter: "מ",
@@ -349,7 +349,7 @@
             id: 18
           },
            {
-            sound: "audio/letters/19.wav",
+            sound: "audio/letters/19.mp3",
             answers: [
               {
                 letter: "ם",
@@ -367,7 +367,7 @@
             id: 19
           },
           {
-            sound: "audio/letters/20.wav",
+            sound: "audio/letters/20.mp3",
             answers: [
               {
                 letter: "נ",
@@ -385,7 +385,7 @@
             id: 20
           },
           {
-            sound: "audio/letters/21.wav",
+            sound: "audio/letters/21.mp3",
             answers: [
               {
                 letter: "ן",
@@ -403,7 +403,7 @@
             id: 21
           },
            {
-            sound: "audio/letters/22.wav",
+            sound: "audio/letters/22.mp3",
             answers: [
               {
                 letter: "ס",
@@ -421,7 +421,7 @@
             id: 22
           },
           {
-            sound: "audio/letters/23.wav",
+            sound: "audio/letters/23.mp3",
             answers: [
               {
                 letter: "ע",
@@ -439,7 +439,7 @@
             id: 2
           },
           {
-            sound: "audio/letters/24.wav",
+            sound: "audio/letters/24.mp3",
             answers: [
               {
                 letter: "פּ",
@@ -457,7 +457,7 @@
             id: 24
           },
            {
-            sound: "audio/letters/25.wav",
+            sound: "audio/letters/25.mp3",
             answers: [
               {
                 letter: "פ",
@@ -475,7 +475,7 @@
             id: 25
           },
           {
-            sound: "audio/letters/26.wav",
+            sound: "audio/letters/26.mp3",
             answers: [
               {
                 letter: "ף",
@@ -493,7 +493,7 @@
             id: 26
           },
           {
-            sound: "audio/letters/27.wav",
+            sound: "audio/letters/27.mp3",
             answers: [
               {
                 letter: "צ",
@@ -511,7 +511,7 @@
             id: 27
           },
            {
-            sound: "audio/letters/28.wav",
+            sound: "audio/letters/28.mp3",
             answers: [
               {
                 letter: "ץ",
@@ -529,7 +529,7 @@
             id: 28
           },
           {
-            sound: "audio/letters/29.wav",
+            sound: "audio/letters/29.mp3",
             answers: [
               {
                 letter: "ק",
@@ -547,7 +547,7 @@
             id: 29
           },
           {
-            sound: "audio/letters/30.wav",
+            sound: "audio/letters/30.mp3",
             answers: [
               {
                 letter: "ר",
@@ -566,7 +566,7 @@
           },
 
            {
-            sound: "audio/letters/31.wav",
+            sound: "audio/letters/31.mp3",
             answers: [
               {
                 letter: "שׁ",
@@ -584,7 +584,7 @@
             id: 31
           },
           {
-            sound: "audio/letters/32.wav",
+            sound: "audio/letters/32.mp3",
             answers: [
               {
                 letter: "שֹ",
@@ -602,7 +602,7 @@
             id: 32
           },
           {
-            sound: "audio/letters/33.wav",
+            sound: "audio/letters/33.mp3",
             answers: [
               {
                 letter: "תּ",
@@ -620,7 +620,7 @@
             id: 33
           },
           {
-            sound: "audio/letters/34.wav",
+            sound: "audio/letters/34.mp3",
             answers: [
               {
                 letter: "ת",
