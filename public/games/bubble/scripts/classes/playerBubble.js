@@ -1,5 +1,5 @@
 class PlayerBubble {
-    constructor(typeOfPlayr, letter, score, color) {
+    constructor(typeOfPlayr, letter, score, color, life) {
         this.typeOfPlayr = typeOfPlayr;
         this.player = new Circle(30, color);
         this.letter = letter;
@@ -19,7 +19,8 @@ class PlayerBubble {
             max: 10
         }, '#d97445').alp(1)
         this.score = score;
-        this.color = color
+        this.color = color;
+        this.life = life
     }
     addPlayer(x, y) {
         this.player.pos(x, y).cur('pointer');
@@ -64,8 +65,13 @@ class PlayerBubble {
                     particle = [this.circle, this.fire];
                     if (object.type !== 'Line') {
                         if (this.score.score > 0) {
-                            this.score.score = this.score.score - 5
+                            this.score.score = this.score.score - 5;
+                            
+                          
                         }
+                          this.life.splice(0, 1);
+                            console.log(this.life)
+                        // this.clearLife()
                         asset("boom.mp3").play({
                             volume: .1
                         })
