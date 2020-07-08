@@ -16,6 +16,10 @@ body {
   text-align: right;
 }
 
+p {
+  font-size: 21px;
+}
+
 /* :root {
   --main-color: #DF262D;
 } */

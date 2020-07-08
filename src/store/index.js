@@ -49,7 +49,7 @@ export default new Vuex.Store({
     },
     {
       name: "אודות",
-      link: "/asd",
+      link: "/about",
       category: 0,
       id: 5
     },
