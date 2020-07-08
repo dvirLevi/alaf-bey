@@ -25,7 +25,7 @@
         // playList: false,
         letterAndSound: [
           {
-            sound: "audio/name-of-sounds/1.wav",
+            sound: "audio/name-of-sounds/1.mp3",
             answers: [
               {
                 letter: "&#1464",
@@ -43,7 +43,7 @@
             id: 1
           },
           {
-            sound: "audio/name-of-sounds/2.wav",
+            sound: "audio/name-of-sounds/2.mp3",
             answers: [
               {
                 letter: "&#1459",
@@ -61,7 +61,7 @@
             id: 2
           },
           {
-            sound: "audio/name-of-sounds/3.wav",
+            sound: "audio/name-of-sounds/3.mp3",
             answers: [
               {
                 letter: "&#1463",
@@ -79,7 +79,7 @@
             id: 3
           },
           {
-            sound: "audio/name-of-sounds/4.wav",
+            sound: "audio/name-of-sounds/4.mp3",
             answers: [
               {
                 letter: "&#1458",
@@ -97,7 +97,7 @@
             id: 4
           },
           {
-            sound: "audio/name-of-sounds/5.wav",
+            sound: "audio/name-of-sounds/5.mp3",
             answers: [
               {
                 letter: "&#1462",
@@ -115,7 +115,7 @@
             id: 5
           },
           {
-            sound: "audio/name-of-sounds/6.wav",
+            sound: "audio/name-of-sounds/6.mp3",
             answers: [
               {
                 letter: "&#1457",
@@ -133,7 +133,7 @@
             id: 6
           },
           {
-            sound: "audio/name-of-sounds/7.wav",
+            sound: "audio/name-of-sounds/7.mp3",
             answers: [
               {
                 letter: "&#1461",
@@ -151,7 +151,7 @@
             id: 7
           },
           {
-            sound: "audio/name-of-sounds/8.wav",
+            sound: "audio/name-of-sounds/8.mp3",
             answers: [
               {
                 letter: "&#1460",
@@ -169,7 +169,7 @@
             id: 8
           },
           {
-            sound: "audio/name-of-sounds/9.wav",
+            sound: "audio/name-of-sounds/9.mp3",
             answers: [
               {
                 letter: "אִ",
@@ -187,7 +187,7 @@
             id: 9
           },
           {
-            sound: "audio/name-of-sounds/11.wav",
+            sound: "audio/name-of-sounds/11.mp3",
             answers: [
               {
                 letter: "&#1456",
@@ -205,7 +205,7 @@
             id: 10
           },
           {
-            sound: "audio/name-of-sounds/12.wav",
+            sound: "audio/name-of-sounds/12.mp3",
             answers: [
               {
                 letter: "אוֹ",
@@ -223,7 +223,7 @@
             id: 11
           },
           {
-            sound: "audio/name-of-sounds/13.wav",
+            sound: "audio/name-of-sounds/13.mp3",
             answers: [
               {
                 letter: "אֹ",
@@ -241,7 +241,7 @@
             id: 12
           },
            {
-            sound: "audio/name-of-sounds/14.wav",
+            sound: "audio/name-of-sounds/14.mp3",
             answers: [
               {
                 letter: "וּ",
@@ -259,7 +259,7 @@
             id: 13
           },
           {
-            sound: "audio/name-of-sounds/15.wav",
+            sound: "audio/name-of-sounds/15.mp3",
             answers: [
               {
                 letter: "&#1467",
