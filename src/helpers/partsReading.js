@@ -1,28 +1,53 @@
 const partsReading = [{
     partsOfRead: [{
         text: "בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים",
-        sound: "audio/bareshis-boro/1.wav",
+        sound: "audio/bareshis-boro/1.mp3",
         id: 1
       },
       {
         text: "אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ:",
-        sound: "audio/bareshis-boro/2.wav",
+        sound: "audio/bareshis-boro/2.mp3",
         id: 2
       },
       {
         text: "וְהָאָ֗רֶץ הָֽיְתָ֥ה תֹ֨הוּ֙ וָבֹ֔הוּ",
-        sound: "audio/bareshis-boro/3.wav",
+        sound: "audio/bareshis-boro/3.mp3",
         id: 3
       },
       {
         text: "וְחֹ֖שֶׁךְ עַל-פְּנֵ֣י תְה֑וֹם",
-        sound: "audio/bareshis-boro/4.wav",
+        sound: "audio/bareshis-boro/4.mp3",
         id: 4
       },
       {
         text: "וְר֣וּחַ אֱלֹהִ֔ים מְרַחֶ֖פֶת עַל-פְּנֵ֥י הַמָּֽיִם:",
-        sound: "audio/bareshis-boro/5.wav",
+        sound: "audio/bareshis-boro/5.mp3",
         id: 5
+      },
+      {
+        text: "וַיֹּ֥אמֶר אֱלֹהִ֖ים יְהִ֣י א֑וֹר וַֽיְהִי-אֽוֹר:",
+        sound: "audio/bareshis-boro/6.mp3",
+        id: 6
+      },
+      {
+        text: "וַיַּ֧רְא אֱלֹהִ֛ים אֶת-הָא֖וֹר כִּי-ט֑וֹב",
+        sound: "audio/bareshis-boro/7.mp3",
+        id: 7
+      },
+      {
+        text: "וַיַּבְדֵּ֣ל אֱלֹהִ֔ים בֵּ֥ין הָא֖וֹר וּבֵ֥ין הַחֹֽשֶׁךְ:",
+        sound: "audio/bareshis-boro/8.mp3",
+        id: 8
+      },
+      {
+        text: "וַיִּקְרָ֨א אֱלֹהִ֤ים | לָאוֹר֙ י֔וֹם וְלַחֹ֖שֶׁךְ קָ֣רָא לָ֑יְלָה",
+        sound: "audio/bareshis-boro/9.mp3",
+        id: 9
+      },
+      {
+        text: "וַֽיְהִי-עֶ֥רֶב וַֽיְהִי-בֹ֖קֶר י֥וֹם אֶחָֽד:",
+        sound: "audio/bareshis-boro/10.mp3",
+        id: 10
       },
     ],
     id: 1

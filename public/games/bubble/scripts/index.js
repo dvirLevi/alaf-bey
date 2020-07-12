@@ -1,4 +1,5 @@
 import PlayerBubble from "../scripts/classes/playerBubble.js"
+import PopupGame from "../scripts/classes/PopupGame.js"
 import randLetter from "../scripts/helpers/randLetter.js"
 
 // https://zimjs.com - JavaScript Canvas Framework - Code Creativity!
@@ -76,59 +77,13 @@ frame.on("ready", () => {
         }
         createFing.create()
 
-        const createOpenGame = {
-            wrap: new Rectangle({
-                width() {
-                    return (mobile()) ? 300 : 600
-                },
-                height: 300,
-                color: "#d6d6d0",
-                corner: 20
-            }),
-            text: new Label({
-                text: "תפסו את כל הבלונים עם האותיות והתרחקו מהמוקשים",
-                size() {
-                    return (mobile()) ? 25 : 30
-                },
-                font: fontType,
-                color: "#4a6bae",
-                bold: true,
-                lineWidth: 300,
-                align: 'center'
-            }),
-            button: new Button({
-                label: new Label({
-                    text: "התחלה",
-                    size: 25,
-                    font: fontType,
-                    color: "white",
-                    bold: true,
-                }).center(),
-                width: 120,
-                height: 70,
-                backgroundColor: "#6da453",
-                rollBackgroundColor: "#679352",
-                corner: 8
-            }),
-            create() {
-                // this.text.x = 100;
-                // this.text.y = 100;
-                this.wrap.center()
-                this.text.pos(0, -30, CENTER, CENTER)
-                this.button.center().pos(0, 100, CENTER, CENTER)
-                this.button.on("click",  ()=>{
-                    startAndPauseGame.startGame();
-                    this.wrap.removeFrom(stage)
-                    this.text.removeFrom(stage)
-                    this.button.removeFrom(stage)
-                });
-            }
-        }
-        createOpenGame.create()
+        
         // let mainInterval;
         // const startGame = ()=> {
              
         // }
+
+        let initalGame = true;
 
         const startAndPauseGame = {
             mainInterval: null,
@@ -150,6 +105,7 @@ frame.on("ready", () => {
                     })
                     this.ifActiv = true
                 }
+                initalGame = true;
             },
             pauseGame() {
                 this.mainInterval.pause();
@@ -157,13 +113,17 @@ frame.on("ready", () => {
             }
         }
 
+        const createOpenGame = new PopupGame("תפסו את כל הבלונים עם האותיות והתרחקו מהמוקשים", fontType);
+        createOpenGame.create(stage, startAndPauseGame, score);
 
 
         Ticker.add(() => {
             createScoreTab.score.text = score.score;
-            if (!createScoreTab.life.length) {
+            if (!createScoreTab.life.length && initalGame) {
                 startAndPauseGame.pauseGame();
-                createOpenGame.create()
+                const endGame = new PopupGame(`הניקוד שלך הוא ${score.score}. שחק שוב!`, fontType);
+                endGame.create(stage, startAndPauseGame, score);
+                initalGame = false
             } else {
                 createScoreTab.addLife();
             }

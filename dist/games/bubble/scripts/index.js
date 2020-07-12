@@ -1,4 +1,5 @@
 import PlayerBubble from "../scripts/classes/playerBubble.js"
+import PopupGame from "../scripts/classes/PopupGame.js"
 import randLetter from "../scripts/helpers/randLetter.js"
 
 // https://zimjs.com - JavaScript Canvas Framework - Code Creativity!
@@ -12,10 +13,13 @@ frame.on("ready", () => {
     var load = frame.loadAssets(["fing.png", "boom.mp3", "success.mp3", "1.mp3", "2.mp3", "3.mp3", "4.mp3", "5.mp3", "6.mp3", "7.mp3", "8.mp3", "9.mp3", "10.mp3", "11.mp3", "12.mp3", "13.mp3", "14.mp3", "15.mp3", "16.mp3", "17.mp3", "18.mp3", "19.mp3", "20.mp3", "21.mp3", "22.mp3", "23.mp3", "24.mp3", "25.mp3", "26.mp3", "27.mp3", "28.mp3", "29.mp3", "30.mp3", "31.mp3", "32.mp3", "33.mp3", "34.mp3", ], 'assets/');
     load.on("complete", () => {
         waiter.hide();
+        const fontType = 'Varela Round'
         const physics = new Physics(-5);
         let score = {
             score: 0
         };
+
+
 
         const createScoreTab = {
             life: [new Circle(15, '#f7943e'), new Circle(15, '#f7943e'), new Circle(15, '#f7943e'), new Circle(15, '#f7943e')],
@@ -28,7 +32,7 @@ frame.on("ready", () => {
             score: new Label({
                 text: score.score,
                 size: 40,
-                font: "Varela Round",
+                font: fontType,
                 color: "#4a6bae",
                 bold: true,
             }),
@@ -38,6 +42,8 @@ frame.on("ready", () => {
             },
             addLife() {
                 this.wrapTab.addChild(this.tile.center(this.wrapTab).pos(-100));
+                this.tile.rows = 1;
+                this.tile.cols = 4;
                 this.tile.items = this.life;
                 this.tile.remake()
             },
@@ -71,24 +77,55 @@ frame.on("ready", () => {
         }
         createFing.create()
 
-        const mainInterval = interval(1, () => {
-            const typePlayer = [1, 0]
-            let playerBubble;
-            if (typePlayer[rand(0, 1)]) {
-                playerBubble = new PlayerBubble("good", randLetter(), score, "red");
-            } else {
-                playerBubble = new PlayerBubble("bad", randLetter().letter, score, "black", createScoreTab.life);
+        
+        // let mainInterval;
+        // const startGame = ()=> {
+             
+        // }
+
+        let initalGame = true;
+
+        const startAndPauseGame = {
+            mainInterval: null,
+            ifActiv: false,
+            startGame() {
+                if(!this.ifActiv) {
+                    createScoreTab.life = [new Circle(15, '#f7943e'), new Circle(15, '#f7943e'), new Circle(15, '#f7943e'), new Circle(15, '#f7943e')]
+                    this.mainInterval = interval(1, () => {
+                        const typePlayer = [1, 0]
+                        let playerBubble;
+                        if (typePlayer[rand(0, 1)]) {
+                            playerBubble = new PlayerBubble("good", randLetter(), score, "red");
+                        } else {
+                            playerBubble = new PlayerBubble("bad", randLetter().letter, score, "black", createScoreTab.life);
+                        }
+                        playerBubble.addPlayer(rand(0, stageW), stageH);
+                        playerBubble.testHit(stage, createLineTop.topLineCleanrBubble, stageW);
+                        playerBubble.testHit(stage, createFing.pin, stageW);
+                    })
+                    this.ifActiv = true
+                }
+                initalGame = true;
+            },
+            pauseGame() {
+                this.mainInterval.pause();
+                this.ifActiv = false
             }
-            playerBubble.addPlayer(rand(0, stageW), stageH);
-            playerBubble.testHit(stage, createLineTop.topLineCleanrBubble, stageW);
-            playerBubble.testHit(stage, createFing.pin, stageW);
-        })
+        }
+
+        const createOpenGame = new PopupGame("תפסו את כל הבלונים עם האותיות והתרחקו מהמוקשים", fontType);
+        createOpenGame.create(stage, startAndPauseGame, score);
+
 
         Ticker.add(() => {
             createScoreTab.score.text = score.score;
-            createScoreTab.addLife();
-            if (!createScoreTab.life.length) {
-                mainInterval.pause()
+            if (!createScoreTab.life.length && initalGame) {
+                startAndPauseGame.pauseGame();
+                const endGame = new PopupGame(`הניקוד שלך הוא ${score.score}. שחק שוב!`, fontType);
+                endGame.create(stage, startAndPauseGame, score);
+                initalGame = false
+            } else {
+                createScoreTab.addLife();
             }
         })
 
