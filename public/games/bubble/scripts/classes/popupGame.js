@@ -39,7 +39,7 @@ class PopupGame {
         // this.text.x = 100;
         // this.text.y = 100;
         this.wrap.center()
-        this.text.pos(0, -20, CENTER, CENTER)
+        this.text.pos(0, -30, CENTER, CENTER)
         this.button.pos(0, 100, CENTER, CENTER)
         this.button.on("click",  ()=>{
             score.score = 0;

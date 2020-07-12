@@ -116,7 +116,7 @@ frame.on("ready", () => {
             }
         }
 
-        const createOpenGame = new PopupGame("תפסו את כל הבלונים עם האותיות והתחמקו מהמוקשים", "התחל", fontType);
+        const createOpenGame = new PopupGame("גררו את המחווט, תפסו את כל הבלונים עם האותיות והתחמקו מהמוקשים", "התחל", fontType);
         createOpenGame.create(stage, startAndPauseGame, score);
 
 
