@@ -1,11 +1,11 @@
 class PopupGame {
-    constructor(text, fontType, startGameFun) {
+    constructor(text, textButt, fontType, startGameFun) {
         this.wrap= new Rectangle({
             width() {
                 return (mobile()) ? 300 : 600
             },
             height: 300,
-            color: "#d6d6d0",
+            color: "#f25f51",
             corner: 20
         });
         this.text= new Label({
@@ -14,14 +14,14 @@ class PopupGame {
                 return (mobile()) ? 25 : 30
             },
             font: fontType,
-            color: "#4a6bae",
+            color: "#fff",
             bold: true,
             lineWidth: 300,
             align: 'center'
         });
         this.button= new Button({
             label: new Label({
-                text: "התחלה",
+                text: textButt,
                 size: 25,
                 font: fontType,
                 color: "white",
@@ -29,8 +29,8 @@ class PopupGame {
             }),
             width: 120,
             height: 70,
-            backgroundColor: "#6da453",
-            rollBackgroundColor: "#679352",
+            backgroundColor: "#f3990a",
+            rollBackgroundColor: "#f3990a",
             corner: 8
         });
         // this.startGame = startGameFun()
@@ -39,7 +39,7 @@ class PopupGame {
         // this.text.x = 100;
         // this.text.y = 100;
         this.wrap.center()
-        this.text.pos(0, -30, CENTER, CENTER)
+        this.text.pos(0, -20, CENTER, CENTER)
         this.button.pos(0, 100, CENTER, CENTER)
         this.button.on("click",  ()=>{
             score.score = 0;

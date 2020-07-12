@@ -40,7 +40,7 @@ class PlayerBubble {
         }
 
     }
-    testHit(stage, object, points) {
+    testHit(stage, object, points, cetch) {
         Ticker.add(() => {
             // this.label.color = "red"
             if (this.player.hitTestRect(object, points)) {
@@ -69,9 +69,16 @@ class PlayerBubble {
                             
                           
                         }
+                        cetch.alpha = .1
+                        timeout(.1, ()=>{
+                            cetch.alpha = 1
+                         });
+                        console.log(cetch)
                           this.life.splice(0, 1);
                             console.log(this.life)
                         // this.clearLife()
+                        
+
                         asset("boom.mp3").play({
                             volume: .1
                         })
