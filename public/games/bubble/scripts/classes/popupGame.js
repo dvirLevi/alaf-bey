@@ -16,7 +16,7 @@ class PopupGame {
             font: fontType,
             color: "#fff",
             bold: true,
-            lineWidth: 300,
+            lineWidth: 290,
             align: 'center'
         });
         this.button= new Button({
