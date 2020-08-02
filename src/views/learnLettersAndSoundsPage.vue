@@ -3,7 +3,7 @@
     <div class="col">
       <div class="row">
         <div class="col center">
-          <ButtonLink v-for="item in soundsTypes" :key="item.id" text="" @customEvent="typeOfSound = item.id" link="" class="center col-md-1 col-2 m-1 p-0 h6">
+          <ButtonLink v-for="item in soundsTypes" :key="item.id" text="" @customEvent="typeOfSound = item.id" link="" class="center col-md-1 col-2 m-1 p-0 butt-sou">
             {{item.letter}}
           </ButtonLink>
         </div>
@@ -97,5 +97,13 @@
     font-size: 30px;
   }
 
-  @media (max-width: 767.98px) {}
+  .butt-sou {
+    font-size: 35px;
+  }
+
+  @media (max-width: 767.98px) {
+    .butt-sou {
+    font-size: 18px;
+  }
+  }
 </style>
