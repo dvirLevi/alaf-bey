@@ -4,9 +4,14 @@
       <div class="w-100 center-right p-2">
         <logo />
       </div>
-      <router-link class="items-menu" :to="item.link" v-for="item in categories" :key="item.id">
+      <div class="items-menu" v-for="item in categories" :key="item.id">
+        <router-link  :to="item.link" v-if="item.category !== 100">
         {{item.name}}
       </router-link>
+      <a :href="item.link" v-else>
+         {{item.name}}
+      </a>
+      </div>
     </div>
   </div>
 </template>
