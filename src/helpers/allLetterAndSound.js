@@ -1224,6 +1224,181 @@
   sound: "audio/shoorak/29.mp3",
   id: 34
 },
+{
+  letter: "אֻּּּ",
+  type: 6,
+  sound: "audio/shoorak/1.mp3",
+  id: 1
+},
+{
+  letter: "בֻּ",
+  type: 6,
+  sound: "audio/shoorak/2.mp3",
+  id: 2
+},
+{
+  letter: "בֻ",
+  type: 6,
+  sound: "audio/shoorak/3.mp3",
+  id: 3
+},
+{
+  letter: "גֻּ",
+  type: 6,
+  sound: "audio/shoorak/4.mp3",
+  id: 4
+},
+{
+  letter: "גֻ",
+  type: 6,
+  sound: "audio/shoorak/5.mp3",
+  id: 5
+},
+{
+  letter: "דֻּ",
+  type: 6,
+  sound: "audio/shoorak/6.mp3",
+  id: 6
+},
+{
+  letter: "דֻ",
+  type: 6,
+  sound: "audio/shoorak/7.mp3",
+  id: 7
+},
+{
+  letter: "הֻ",
+  type: 6,
+  sound: "audio/shoorak/8.mp3",
+  id: 8
+},
+{
+  letter: "וֻ",
+  type: 6,
+  sound: "audio/shoorak/9.mp3",
+  id: 9
+},
+{
+  letter: "זֻ",
+  type: 6,
+  sound: "audio/shoorak/10.mp3",
+  id: 10
+},
+{
+  letter: "חֻ",
+  type: 6,
+  sound: "audio/shoorak/11.mp3",
+  id: 11
+},
+{
+  letter: "טֻ",
+  type: 6,
+  sound: "audio/shoorak/12.mp3",
+  id: 12
+},
+{
+  letter: "יֻ",
+  type: 6,
+  sound: "audio/shoorak/13.mp3",
+  id: 13
+},
+{
+  letter: "כֻּ",
+  type: 6,
+  sound: "audio/shoorak/14.mp3",
+  id: 14
+},
+{
+  letter: "כֻ",
+  type: 6,
+  sound: "audio/shoorak/15.mp3",
+  id: 15
+},
+{
+  letter: "לֻ",
+  type: 6,
+  sound: "audio/shoorak/16.mp3",
+  id: 17
+},
+{
+  letter: "מֻ",
+  type: 6,
+  sound: "audio/shoorak/17.mp3",
+  id: 18
+},
+{
+  letter: "נֻ",
+  type: 6,
+  sound: "audio/shoorak/18.mp3",
+  id: 20
+},
+{
+  letter: "סֻ",
+  type: 6,
+  sound: "audio/shoorak/19.mp3",
+  id: 22
+},
+{
+  letter: "עֻ",
+  type: 6,
+  sound: "audio/shoorak/20.mp3",
+  id: 2
+},
+{
+  letter: "פֻּ",
+  type: 6,
+  sound: "audio/shoorak/21.mp3",
+  id: 24
+},
+{
+  letter: "פֻ",
+  type: 6,
+  sound: "audio/shoorak/22.mp3",
+  id: 25
+},
+{
+  letter: "צֻ",
+  type: 6,
+  sound: "audio/shoorak/23.mp3",
+  id: 27
+},
+{
+  letter: "קֻ",
+  type: 6,
+  sound: "audio/shoorak/24.mp3",
+  id: 29
+},
+{
+  letter: "רֻ",
+  type: 6,
+  sound: "audio/shoorak/25.mp3",
+  id: 30
+},
+
+{
+  letter: "שֻׁ",
+  type: 6,
+  sound: "audio/shoorak/26.mp3",
+  id: 31
+},
+{
+  letter: "שֹֻ",
+  type: 6,
+  sound: "audio/shoorak/27.mp3",
+  id: 32
+},
+{
+  letter: "תֻּ",
+  type: 6,
+  sound: "audio/shoorak/28.mp3",
+  id: 33
+},
+{
+  letter: "תֻ",
+  type: 6,
+  sound: "audio/shoorak/29.mp3",
+  id: 34
+},
 ]
 
 export default allLetterAndSound

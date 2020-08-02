@@ -62,20 +62,21 @@
             id: 6
           },
           {
-            letter: "אְ",
-            sound: "audio/letters/7.wav",
-            id: 7
+            letter: "וּ",
+            sound: "audio/letters/9.wav",
+            id: 9
           },
+          // {
+          //   letter: "אְ",
+          //   sound: "audio/letters/7.wav",
+          //   id: 7
+          // },
           {
             letter: "וֹ",
             sound: "audio/letters/8.wav",
             id: 8
           },
-          {
-            letter: "וּ",
-            sound: "audio/letters/9.wav",
-            id: 9
-          },
+          
         ],
         typeOfSound: 1
       }
