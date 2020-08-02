@@ -49,7 +49,7 @@ export default new Vuex.Store({
     },
     {
       name: "משחק ללימוד שמות האותיות",
-      link: "https://alaf-bey.netlify.app/games/bubble",
+      link: "/games/bubble",
       category: 0,
       id: 5
     },
