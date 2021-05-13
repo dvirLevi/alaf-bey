@@ -172,7 +172,7 @@
             sound: "audio/name-of-sounds/9.mp3",
             answers: [
               {
-                letter: "אִ",
+                letter: "אִי",
                 ifCorrect: true
               },
               {
